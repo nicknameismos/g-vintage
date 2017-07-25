@@ -6,7 +6,7 @@ import { Observable } from 'rxjs/Observable';
 
 import { WalkthroughPage } from '../pages/walkthrough/walkthrough';
 import { TabsNavigationPage } from '../pages/tabs-navigation/tabs-navigation';
-
+import {ProductdetailPage} from '../pages/productdetail/productdetail';
 import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
 
 @Component({
@@ -18,7 +18,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   // make WalkthroughPage the root (or first) page
-  rootPage: any = WalkthroughPage;
+  rootPage: any = ProductdetailPage;
 
   textDir: string = "ltr";
 
