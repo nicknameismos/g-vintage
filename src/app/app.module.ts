@@ -49,12 +49,13 @@ import { ListingService } from '../pages/listing/listing.service';
 import { ProfileService } from '../pages/profile/profile.service';
 import { NotificationsService } from '../pages/notifications/notifications.service';
 import { ScheduleService } from "../pages/schedule/schedule.service";
+import { List2Service } from '../pages/list-2/list-2.service';
 
 //providers
 import { LanguageService } from '../providers/language/language.service';
 
 //add new
-import { List2Page } from "../pages/list-2/list-2.ts";
+import { List2Page } from "../pages/list-2/list-2";
 import { SettingsPage } from '../pages/settings/settings';
 import { ContactCardPage } from '../pages/contact-card/contact-card';
 import { ProductdetailPage } from '../pages/productdetail/productdetail';
@@ -62,6 +63,8 @@ import { FormValidationsPage } from '../pages/form-validations/form-validations'
 import { SchedulePage } from '../pages/schedule/schedule';
 import { PaymentPage } from '../pages/payment/payment';
 import { Rating } from '../components/rating/rating';
+import { FormValidationsServiceProvider } from '../pages/form-validations/form-validations.service';
+import { ContactService } from '../pages/contact-card/contact-card.service';
 
 
 
@@ -83,7 +86,6 @@ export function createTranslateLoader(http: Http) {
     ListingPage,
     NotificationsPage,
     ProfilePage,
-
     List2Page,
     SettingsPage,
     ContactCardPage,
@@ -135,8 +137,13 @@ export function createTranslateLoader(http: Http) {
     ListingService,
     ProfileService,
     NotificationsService,
+<<<<<<< HEAD
     ScheduleService,
 
+=======
+    ContactService,
+    List2Service,
+>>>>>>> f60a88fc5853a31fd4f380b88d81852667f5cafa
     // FacebookLoginService,
     // GoogleLoginService,
     // TwitterLoginService,
@@ -157,7 +164,8 @@ export function createTranslateLoader(http: Http) {
     AppRate,
     ImagePicker,
     Crop,
-    EmailComposer
+    EmailComposer,
+    FormValidationsServiceProvider
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

@@ -5,6 +5,7 @@ import 'rxjs/Rx';
 
 import { List2Model } from './list-2.model';
 import { List2Service } from './list-2.service';
+import { ProductdetailPage } from "../productdetail/productdetail";
 
 @Component({
   selector: 'list-2-page',
@@ -30,6 +31,10 @@ export class List2Page {
         this.list2.items = data.items;
         this.loading.dismiss();
       });
+  }
+
+  openPageProductDetail(){
+    this.nav.push(ProductdetailPage);
   }
 
 }

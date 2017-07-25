@@ -7,6 +7,10 @@ import { PasswordValidator } from '../../components/validators/password.validato
 import { PhoneValidator } from '../../components/validators/phone.validator';
 
 import { Country } from './form-validations.model';
+import { User } from './form-validations.model';
+import { address } from './form-validations.model';
+import { FormValidationsServiceProvider } from "./form-validations.service";
+import { PaymentPage } from "../payment/payment";
 
 import emailMask from 'text-mask-addons/dist/emailMask';
 
@@ -26,7 +30,24 @@ export class FormValidationsPage {
   countries: Array<Country>;
   genders: Array<string>;
 
-  constructor(public navCtrl: NavController, public formBuilder: FormBuilder) { }
+  chk: string = 'true';
+  user: any = {
+    userprofile: {
+      address: {}
+    }
+  };
+  profile: User = new User();
+
+  constructor(public navCtrl: NavController, public formBuilder: FormBuilder, public formValidationsServiceProvider: FormValidationsServiceProvider) {
+
+    this.formValidationsServiceProvider.getUser()
+      .then(data => {
+        this.user = data;
+        this.profile = new User();
+        this.profile = data;
+      });
+
+  }
 
   ionViewWillLoad() {
     this.countries = [
@@ -69,7 +90,12 @@ export class FormValidationsPage {
         Validators.pattern('^(?=.*[a-zA-Z])(?=.*[0-9])[a-zA-Z0-9]+$'),
         Validators.required
       ])),
+      address: new FormControl('', Validators.required),
+      postcode: new FormControl('', Validators.required),
       name: new FormControl('', Validators.required),
+      province: new FormControl('', Validators.required),
+      district: new FormControl('', Validators.required),
+      tel: new FormControl('', Validators.required),
       lastname: new FormControl('', Validators.required),
       email: new FormControl('', Validators.compose([
         Validators.required,
@@ -92,6 +118,21 @@ export class FormValidationsPage {
     ],
     'name': [
       { type: 'required', message: 'Name is required.' }
+    ],
+    'postcode': [
+      { type: 'required', message: 'Postcode is required.' }
+    ],
+    'province': [
+      { type: 'required', message: 'Province is required.' }
+    ],
+    'district': [
+      { type: 'required', message: 'District is required.' }
+    ],
+    'tel': [
+      { type: 'required', message: 'Tel is required.' }
+    ],
+    'address': [
+      { type: 'required', message: 'address is required.' }
     ],
     'lastname': [
       { type: 'required', message: 'Last name is required.' }
@@ -120,7 +161,11 @@ export class FormValidationsPage {
     ],
   };
 
-  onSubmit(values){
+  onSubmit(values) {
     console.log(values);
+  }
+
+  goToPayment() {
+    this.navCtrl.push(PaymentPage);
   }
 }
