@@ -48,7 +48,9 @@ export class ListingPage {
   goToPrdDetial() {
     this.nav.push(ProductdetailPage);
   }
-  // goTo() {
-  //   this.nav.push(Product);
-  // }
+  goToShop() {
+    // this.nav.push();
+    // goTo() {
+    //   this.nav.push(Product);
+  }
 }

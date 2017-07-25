@@ -7,12 +7,43 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>payment</ion-title>
+    <ion-title>Payment</ion-title>
   </ion-navbar>
 
 </ion-header>
 
-
 <ion-content padding>
-
+  <ion-list radio-group>
+    <ion-item>
+      <ion-label text-center>
+        <img src="assets/images/payment/Kerry_Express.png" alt="payment-image" class="image-payment">
+      </ion-label>
+      <ion-radio value="KerryExpress" checked item-start></ion-radio>
+    </ion-item>
+  </ion-list>
 </ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-list>
+      <ion-item color="light">
+        <p>Total</p>
+        <ion-note item-end class="note-price">
+          <b>1,000 Bath</b>
+        </ion-note>
+      </ion-item>
+      <ion-item color="light">
+        <p> Delivery charge</p>
+        <p class="payment">- Kerry Express</p>
+        <ion-note item-end class="note-price">
+          <b>100 Bath</b>
+        </ion-note>
+      </ion-item>
+      <ion-item color="light">
+        <ion-note item-end class="note-price">
+          <b>1,100 Bath</b>
+        </ion-note>
+      </ion-item>
+    </ion-list>
+    <button ion-button block>Confirm</button>
+  </ion-toolbar>
+</ion-footer>
