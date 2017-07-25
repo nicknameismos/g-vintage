@@ -1,86 +1,61 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>{{'CONTACT_CARD' | translate}}</ion-title>
+    <ion-title>{{'Product Detail' | translate}}</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content class="contact-card-content">
-  <img src="{{product.productdetail.img}}" alt="">
+  <preload-image [ratio]="{w:4, h:4}" [src]="product.productdetail.img" alt="{{ product.productdetail.name }}" title="{{ product.productdetail.name }} - {{ product.productdetail.detail }}"></preload-image>
+
   <ion-row class="contact-details-row" wrap>
     <ion-col no-padding width-65>
-      <h2 class="contact-name">{{product.name}}</h2>
+      <h2 class="contact-name">{{ product.productdetail.name }}</h2>
     </ion-col>
     <ion-col no-padding width-35 class="rating-col">
-     
+      <!-- <div class="contact-rating">
+        <ion-item class="rating-item">
+          <rating [(ngModel)]="contact.rating" max="5" read-only="true"></rating>
+        </ion-item>
+      </div> -->
     </ion-col>
     <ion-col no-padding width-100>
       <p class="contact-description">
-        Today opens from 8:30 am to 6:00 pm
+        {{ product.productdetail.detail }}
       </p>
     </ion-col>
   </ion-row>
-  <!-- <div class="button-bar"> -->
-  <!-- <button ion-button primary (click)="call(contact.phone)"> -->
-  <!-- <button ion-button primary>
-      <ion-icon name="call"></ion-icon>
-    </button>
-    <button ion-button primary (click)="sendMail(contact.email)">
-      <ion-icon name="mail"></ion-icon>
-    </button>
-    <button ion-button primary (click)="openInAppBrowser(contact.website)">
-      <ion-icon name="globe"></ion-icon>
-    </button>
-  </div> -->
-  <!-- <preload-image [ratio]="{w:4, h:3}" src="https://maps.googleapis.com/maps/api/staticmap?center=40.785091,-73.968285&zoom=15&size=400x300&scale=2&markers=icon:https://s3-us-west-2.amazonaws.com/ionicthemes-apps-assets/ion2FullApp/pin.min.png|40.785091,-73.968285" alt="{{ contact.name }} location map" title="{{ contact.name }} - {{ contact.address }}"></preload-image> -->
-
+  
   <ion-list class="details-list">
-    <ion-item class="detail-item">
+    <!-- <ion-item class="detail-item">
       <ion-avatar item-left>
-        <ion-icon name="home"></ion-icon>
+        <ion-icon name="pin"></ion-icon>
       </ion-avatar>
-      <span class="detail-text">iHome Shop</span>
+      <span class="detail-text">{{ contact.address }}</span>
     </ion-item>
     <ion-item class="detail-item">
       <ion-avatar item-left>
         <ion-icon name="globe"></ion-icon>
       </ion-avatar>
-      <span class="detail-text">www.iHomeshop.io</span>
-    </ion-item>
+      <span class="detail-text">{{ contact.website }}</span>
+    </ion-item> -->
     <ion-item class="detail-item">
       <ion-avatar item-left>
         <ion-icon name="call"></ion-icon>
       </ion-avatar>
-      <span class="detail-text">084-444-4444</span>
+      <span class="detail-text">{{ product.productdetail.price }}</span>
     </ion-item>
-    <ion-item class="detail-item">
-      <ion-avatar item-left>
-        <ion-icon name="mail"></ion-icon>
-      </ion-avatar>
-      <span class="detail-text">ihomeshop_io@hotmail.com</span>
-    </ion-item>
+    
   </ion-list>
-  <ion-item-group>
-    <ion-item-divider color="light"><b>สินค้าที่เกี่ยวข้องกับร้านค้า</b>
-    </ion-item-divider>
-  </ion-item-group>
-
-
-  <ion-row>
-    <ion-col col-8>
-      <h4 class="categories-title" margin>{{'สินค้ายอดนิยม' | translate}}</h4>
-    </ion-col>
-    <ion-col col-4 text-right>
-    </ion-col>
-  </ion-row>
-  <ion-scroll scrollX="true" class="horizontal-categories">
-    <ion-row class="categories-row">
-      <ion-col width-30 class="horizontal-item">
-        <preload-image [ratio]="{w:1, h:1}"></preload-image>
-        <p class="txt-centr">ttt</p>
-        <p class="txt-centr2"> ฿</p>
-      </ion-col>
-    </ion-row>
-  </ion-scroll>
+  <h4 class="categories-title">{{'POPULAR' | translate}}</h4>
+   <ion-scroll scrollX="true" class="horizontal-categories">
+     <ion-row class="categories-row">
+       <ion-col width-30 class="horizontal-item" *ngFor="let item of contact.shop.product">
+        <preload-image [ratio]="{w:1, h:1}" [src]="item.img" title="item.name"></preload-image>
+        <p class="txt-centr">{{item.name}}</p>
+        <p class="txt-centr2">{{item.price}} ฿</p>
+      </ion-col> 
+    </ion-row> 
+  </ion-scroll> 
 </ion-content>
 
 <ion-footer>

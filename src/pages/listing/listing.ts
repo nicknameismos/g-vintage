@@ -7,7 +7,8 @@ import 'rxjs/Rx';
 
 import { ListingModel } from './listing.model';
 import { ListingService } from './listing.service';
-
+import { ContactCardPage } from '../contact-card/contact-card';
+import { List2Page } from '../list-2/list-2';
 
 @Component({
   selector: 'listing-page',
@@ -45,12 +46,15 @@ export class ListingPage {
     console.log("Clicked goToFeed", category);
     // this.nav.push(FeedPage, { category: category });
   }
-  goToPrdDetial() {
+  goToPrdDetail() {
     this.nav.push(ProductdetailPage);
   }
   goToShop() {
-    // this.nav.push();
+    this.nav.push(ContactCardPage);
     // goTo() {
     //   this.nav.push(Product);
+  }
+  goToPrdList() {
+    this.nav.push(List2Page);
   }
 }

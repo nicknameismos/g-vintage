@@ -63,6 +63,7 @@ import { FormValidationsPage } from '../pages/form-validations/form-validations'
 import { SchedulePage } from '../pages/schedule/schedule';
 import { PaymentPage } from '../pages/payment/payment';
 import { Rating } from '../components/rating/rating';
+import { FormValidationsServiceProvider } from '../pages/form-validations/form-validations.service';
 import { ContactService } from '../pages/contact-card/contact-card.service';
 
 
@@ -160,7 +161,8 @@ export function createTranslateLoader(http: Http) {
     AppRate,
     ImagePicker,
     Crop,
-    EmailComposer
+    EmailComposer,
+    FormValidationsServiceProvider
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
