@@ -49,6 +49,7 @@ import { ListingService } from '../pages/listing/listing.service';
 import { ProductdetailService } from '../pages/productdetail/productdetail.service';
 import { ProfileService } from '../pages/profile/profile.service';
 import { NotificationsService } from '../pages/notifications/notifications.service';
+import { ScheduleService } from "../pages/schedule/schedule.service";
 import { List2Service } from '../pages/list-2/list-2.service';
 
 //providers
@@ -138,6 +139,7 @@ export function createTranslateLoader(http: Http) {
     ProfileService,
 
     NotificationsService,
+    ScheduleService,
     ContactService,
     List2Service,
     ProductdetailService,

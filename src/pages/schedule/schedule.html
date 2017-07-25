@@ -1,50 +1,68 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>{{'SCHEDULE' | translate}}</ion-title>
+    <ion-title>{{'ตระกร้าสินค้าของฉัน' | translate}}</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content class="schedule-content">
-  <ion-segment class="schedule-segment" [(ngModel)]="segment" (ionChange)="onSegmentChanged($event)">
+  <!-- <ion-segment class="schedule-segment" [(ngModel)]="segment" (ionChange)="onSegmentChanged($event)">
     <ion-segment-button value="today" (ionSelect)="onSegmentSelected($event)">
       {{'TODAY' | translate}}
     </ion-segment-button>
     <ion-segment-button value="upcoming" (ionSelect)="onSegmentSelected($event)">
       {{'UPCOMING' | translate}}
     </ion-segment-button>
-  </ion-segment>
+  </ion-segment> -->
 
-  <div [ngSwitch]="segment">
-    <div *ngSwitchCase="'today'">
+  <div>
+    <div>
       <ion-list class="schedule-list">
         <ion-item class="schedule-item" *ngFor="let item of schedule.today">
           <ion-row>
-            <ion-col width-20 class="schedule-date">
-              <h2 class="schedule-day">{{item.date.day}}</h2>
-              <h3 class="schedule-month">{{item.date.month_name}}</h3>
-              <h4 class="schedule-time">{{item.date.time}}</h4>
+            <ion-col col-2 class="schedule-date">
+              <img src="http://xiostorage.com/wp-content/uploads/2015/10/test.png" alt="">
             </ion-col>
-            <ion-col width-80 class="schedule-data">
+            <ion-col col-7 class="schedule-data">
               <div class="data-item">
                 <div class="item-content">
                   <h2 class="item-title one-line">{{item.subject}}</h2>
                   <div class="item-description">
-                    <ion-icon class="description-icon" name="clock"></ion-icon>
-                    <p class="description-text">{{item.date.full}}</p>
+                    <!-- <ion-icon class="description-icon" name="clock"></ion-icon> -->
+                    <p class="description-text">{{item.price}} บาท</p>
                   </div>
                   <div class="item-description">
-                    <ion-icon class="description-icon" name="navigate"></ion-icon>
+                    <!-- <ion-icon class="description-icon" name="navigate"></ion-icon> -->
                     <p class="description-text one-line">{{item.location}}</p>
                   </div>
+
+
+                  <!-- <ion-select [(ngModel)]="toppings" multiple="true">
+                      <ion-option>Bacon</ion-option>
+                      <ion-option>Black Olives</ion-option>
+                      <ion-option>Extra Cheese</ion-option>
+                      <ion-option>Mushrooms</ion-option>
+                      <ion-option>Pepperoni</ion-option>
+                      <ion-option>Sausage</ion-option>
+                    </ion-select> -->
+
                 </div>
-                <ion-icon class="item-icon" name="arrow-forward"></ion-icon>
+
               </div>
+            </ion-col>
+            <ion-col col-1 class="schedule-data">
+              <ion-icon name="remove" (click)="removeNum()"></ion-icon>
+            </ion-col>
+            <ion-col col-1 class="schedule-data">
+              <h4>{{num}}</h4>
+            </ion-col>
+            <ion-col col-1 class="schedule-data">
+              <ion-icon name="add" (click)="addNum()"></ion-icon>
             </ion-col>
           </ion-row>
         </ion-item>
       </ion-list>
     </div>
-    <div *ngSwitchCase="'upcoming'">
+    <!-- <div *ngSwitchCase="'upcoming'">
       <ion-list class="schedule-list">
         <ion-item class="schedule-item" *ngFor="let item of schedule.upcoming">
           <ion-row>
@@ -72,6 +90,32 @@
           </ion-row>
         </ion-item>
       </ion-list>
-    </div>
+    </div> -->
+  </div>
+  <div>
+    <ion-list class="schedule-list">
+      <ion-item class="schedule-item">
+        <ion-row>
+          <ion-col col-4 class="schedule-data">
+            <p>จำนวนทั้งหมด</p>
+          </ion-col>
+          <ion-col col-5 class="schedule-data">
+
+          </ion-col>
+          <ion-col col-3 class="schedule-data">
+            <p>500 บาท</p>
+          </ion-col>
+        </ion-row>
+
+      </ion-item>
+    </ion-list>
   </div>
 </ion-content>
+
+
+
+<ion-footer>
+  <ion-navbar>
+    <ion-title class="danger">ดำเนินการชำระเงิน</ion-title>
+  </ion-navbar>
+</ion-footer>
