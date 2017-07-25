@@ -20,7 +20,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   // make WalkthroughPage the root (or first) page
-  rootPage: any = ContactCardPage;
+  rootPage: any = WalkthroughPage;
 
   textDir: string = "ltr";
 
