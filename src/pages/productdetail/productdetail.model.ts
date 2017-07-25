@@ -1,5 +1,7 @@
 export class ProductdetailModel {
-	productdetail: Array<productdetailitem>;
+	// productdetail: Array<productdetailitem>;
+	    productdetail: productdetailitem = new productdetailitem();
+
 
 
 } export class productdetailitem {

@@ -49,12 +49,13 @@ import { ListingService } from '../pages/listing/listing.service';
 import { ProductdetailService } from '../pages/productdetail/productdetail.service';
 import { ProfileService } from '../pages/profile/profile.service';
 import { NotificationsService } from '../pages/notifications/notifications.service';
+import { List2Service } from '../pages/list-2/list-2.service';
 
 //providers
 import { LanguageService } from '../providers/language/language.service';
 
 //add new
-import { List2Page } from "../pages/list-2/list-2.ts";
+import { List2Page } from "../pages/list-2/list-2";
 import { SettingsPage } from '../pages/settings/settings';
 import { ContactCardPage } from '../pages/contact-card/contact-card';
 import { ProductdetailPage } from '../pages/productdetail/productdetail';
@@ -62,6 +63,7 @@ import { FormValidationsPage } from '../pages/form-validations/form-validations'
 import { SchedulePage } from '../pages/schedule/schedule';
 import { PaymentPage } from '../pages/payment/payment';
 import { Rating } from '../components/rating/rating';
+import { ContactService } from '../pages/contact-card/contact-card.service';
 
 
 
@@ -83,7 +85,6 @@ export function createTranslateLoader(http: Http) {
     ListingPage,
     NotificationsPage,
     ProfilePage,
-
     List2Page,
     SettingsPage,
     ContactCardPage,
@@ -134,9 +135,11 @@ export function createTranslateLoader(http: Http) {
   providers: [
     ListingService,
     ProfileService,
-    NotificationsService, 
-    ProductdetailService,
 
+    NotificationsService,
+    ContactService,
+    List2Service,
+    ProductdetailService,
     // FacebookLoginService,
     // GoogleLoginService,
     // TwitterLoginService,

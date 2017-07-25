@@ -5,22 +5,13 @@
 </ion-header>
 
 <ion-content class="contact-card-content">
-  <ion-slides class="contact-slides" pager="true" autoplay="4000" loop="false">
-    <ion-slide class="contact-slide">
-      <!-- <ion-slide class="contact-slide" *ngFor="let image of contact.images"> -->
-      <background-image class="slide-image" src="{{product.img}}"></background-image>
-    </ion-slide>
-  </ion-slides>
+  <img src="{{product.productdetail.img}}" alt="">
   <ion-row class="contact-details-row" wrap>
     <ion-col no-padding width-65>
       <h2 class="contact-name">{{product.name}}</h2>
     </ion-col>
     <ion-col no-padding width-35 class="rating-col">
-      <div class="contact-rating">
-        <ion-item class="rating-item">
-          <!-- <rating [(ngModel)]="contact.rating" max="5" read-only="true"></rating> -->
-        </ion-item>
-      </div>
+     
     </ion-col>
     <ion-col no-padding width-100>
       <p class="contact-description">

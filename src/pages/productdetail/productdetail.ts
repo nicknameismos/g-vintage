@@ -4,6 +4,7 @@ import { EmailComposer } from '@ionic-native/email-composer';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 import { ProductdetailModel } from './productdetail.model';
+import { ProductdetailService } from './productdetail.service';
 
 @Component({
   selector: 'productdetail-page',
@@ -15,9 +16,14 @@ export class ProductdetailPage {
   constructor(
     public navCtrl: NavController,
     private emailComposer: EmailComposer,
-    public inAppBrowser: InAppBrowser
+    public inAppBrowser: InAppBrowser,
+    public productdetailService: ProductdetailService
   ) {
-    
+    this.productdetailService
+      .getData()
+      .then(data => {
+        this.product.productdetail = data.productdetail;
+      });
   }
 
   //Note: we commented this method because the Call Number plugin was unstable and causing lots of errors. If you want to use it please go: https://ionicframework.com/docs/native/call-number/

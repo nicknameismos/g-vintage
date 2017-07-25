@@ -1,104 +1,106 @@
 {
-    "lastview": [
-        {
-            "name": "Samsung Galaxy J7 Pro (Gold)",
-            "detail": "สมาร์ทโฟนรุ่นใหม่ล่าสุดที่พกพาฟีเจอร์การทำงานมาแบบจัดเต็มในทุกองค์ประกอบอย่าง Samsung Galaxy J7 Pro ที่มาพร้อมกับฟีเจอร์เด็ดสำหรับการถ่ายรูปลงโซเชียลโดยเฉพาะ ที่จะทำให้คุณท่องโลกโซเชียลได้อย่างสนุก สะดวก สบาย และง่ายขึ้นมากกว่าเดิม อีกทั้งยังโดดเด่นด้วยตัวเครื่องสี Gold และบางเพียง 7.8 มม. จับถนัดมือมากกว่าเดิม",
-            "price": "8999",
-            "img": "assets/images/products/p7.png"
-        },
-        {
-            "name": "Samsung Galaxy S8 (Midnight Black) ",
-            "detail": "ฉีกทุกกฎแห่งการดีไซน์ บ่งบอกสไตล์อันไร้ขอบเขต ด้วย Samsung Galaxy S8 ให้คุณหลุดออกจากกรอบของหน้าจอแบบเก่าๆ เป็นอิสระจากขีดจำกัด และมอบพื้นผิวที่เรียบลื่นไร้รอยต่อครอบคลุมขอบด้านข้าง คุณจึงได้มุมมองที่กว้างขึ้น ไร้สิ่งกีดขวาง",
-            "price": "21790",
-            "img": "assets/images/products/p8.png"
-        },
-        {
-            "name": "Samsung Galaxy S6 Edge",
-            "detail": "Samsung Galaxy S6 Edge สีดำ สินค้าตัวโชว์",
-            "price": "12900",
-            "img": "assets/images/products/p9.png"
-        },
-        {
-            "name": "Samsung Galaxy A7 (2017) - Blue",
-            "detail": "สมาร์ทโฟนสเปคเยี่ยมกับราคาเบาๆ จาก Samsung ที่ตอบสนองทุกความต้องการอย่างลงตัวด้วย ระบบปฏิบัติการ Android เเละรวดเร็วทันใจด้วยหน่วยประมวลผลที่ดีเยี่ยม พร้อมหน้าจอขนาด 5.7 นิ้วและกล้องหลังที่มีความละเอียดถึง 16 ล้านพิกเซล ทำให้คุณสามารถถ่ายภาพได้สวยคมชัดถูกใจคุณอย่างแน่นอน",
-            "price": "11111",
-            "img": "assets/images/products/p10.png"
-        },
-        {
-            "name": "Samsung Galaxy J2 Prime 8GB (Gold)  ",
-            "detail": "ที่สุดแห่งสมาร์ทโฟน จากตระกูล J Series ของค่าย Samsung ที่สามารถตอบสนองการใช้งานในระดับพื้นฐานได้อย่างครบครัน Samsung Galaxy J2 Prime 8GB (Gold) สมาร์ทโฟนราคาประหยัด ขนาดเหมาะมือ และใช้งาน 4G LTE ได้ รองรับการถ่ายรูปในโหมดหน้าสวยได้ถึง 8 ระดับ",
-            "price": "3579",
-            "img": "assets/images/products/p11.png"
-        },
-        {
-            "name": "Samsung Galaxy A9 Pro 32GB (White) ",
-            "detail": "ใหญ่กว่าและกว้างกว่า แสดงทุกรายละเอียดอย่างคมชัด ดีไซน์เมทัลและกระจกที่สวยงามประกอบด้วยจอแสดงผล Super AMOLED ขนาด 6.0 นิ้ว มอบความพึงพอใจสูงสุดในการรับชม รองรับทุกความต้องการด้านเกมและมัลติมีเดีย",
-            "price": "15900",
-            "img": "assets/images/products/p12.png"
-        }
-    ],
-    "bestseller": [
-        {
-            "name": "OTTO เตารีดไฟฟ้า 1000W รุ่น EI-601 - Pink",
-            "detail": "OTTO เตารีดไฟฟ้า 1000W รุ่น EI-601 - Pink หน้าเตาเคลือบ (NON STICK) รีดเรียบไม่ติดผ้า",
-            "price": "199",
-            "img": "assets/images/products/p1.png"
-        },
-        {
-            "name": "กระเป๋าสะพายสำหรับผู้หญิง No.M2506",
-            "detail": "Marino กระเป๋า กระเป๋าสะพาย กระเป๋าสะพายสำหรับผู้หญิง No.M2506 - Black",
-            "price": "500",
-            "img": "assets/images/products/p2.png"
-        },
-        {
-            "name": "กระเป๋าเดินทาง รุ่น PARALITE ขนาด 20 นิ้ว",
-            "detail": "AMERICAN TOURISTER กระเป๋าเดินทาง รุ่น PARALITE ขนาด 20 นิ้ว (สี SNORKLE BLUE)",
-            "price": "3890",
-            "img": "assets/images/products/p3.png"
-        },
-        {
-            "name": "Vivo V5 Lite (3/32GB)",
-            "detail": "Vivo V5 Lite (3/32GB) ฟรี! ชุดของแถม (รับประกัน 1 ปี)",
-            "price": "6499",
-            "img": "assets/images/products/p4.png"
-        },
-        {
-            "name": "เครื่องหนีบถนอมเส้นผม เลอซาช่า Chic White Ceramic",
-            "detail": "Lesasha เครื่องหนีบถนอมเส้นผม เลอซาช่า Chic White Ceramic รุ่น LS0298",
-            "price": "489",
-            "img": "assets/images/products/p5.png"
-        },
-        {
-            "name": "OLAY Regenerist Overnight Miracle-Micro-Sculpting & Miracle Boost",
-            "detail": "OLAY Regenerist Overnight Miracle-Micro-Sculpting Cream 50g. & Miracle Boost Youth Pre-essence 40ml.",
-            "price": "1290",
-            "img": "assets/images/products/p6.png"
-        }
-    ],
-    "shop": [
-        {
-            "name": "Microsoft",
-            "img": "assets/images/shop/shop1.png"
-        },
-        {
-            "name": "Samsung",
-            "img": "assets/images/shop/shop2.png"
-        },
-        {
-            "name": "Converse",
-            "img": "assets/images/shop/shop3.png"
-        },
-        {
-            "name": "Fuji Film",
-            "img": "assets/images/shop/shop4.png"
-        },
-        {
-            "name": "Unilever",
-            "img": "assets/images/shop/shop5.png"
-        },
-        {
-            "name": "Nike",
-            "img": "assets/images/shop/shop6.png"
-        }
-    ]
+  "banner_image": "./assets/images/listing/600x300banner2.jpg",
+  "banner_title": "Green Vintage",
+  "lastview": [
+    {
+      "name": "OTTO เตารีดไฟฟ้า 1000W รุ่น EI-601 - Pink",
+      "detail": "OTTO เตารีดไฟฟ้า 1000W รุ่น EI-601 - Pink หน้าเตาเคลือบ (NON STICK) รีดเรียบไม่ติดผ้า",
+      "price": "199",
+      "img": "assets/images/products/p1.png"
+    },
+    {
+      "name": "กระเป๋าสะพายสำหรับผู้หญิง No.M2506",
+      "detail": "Marino กระเป๋า กระเป๋าสะพาย กระเป๋าสะพายสำหรับผู้หญิง No.M2506 - Black",
+      "price": "500",
+      "img": "assets/images/products/p2.png"
+    },
+    {
+      "name": "กระเป๋าเดินทาง รุ่น PARALITE ขนาด 20 นิ้ว",
+      "detail": "AMERICAN TOURISTER กระเป๋าเดินทาง รุ่น PARALITE ขนาด 20 นิ้ว (สี SNORKLE BLUE)",
+      "price": "3890",
+      "img": "assets/images/products/p3.png"
+    },
+    {
+      "name": "Vivo V5 Lite (3/32GB)",
+      "detail": "Vivo V5 Lite (3/32GB) ฟรี! ชุดของแถม (รับประกัน 1 ปี)",
+      "price": "6499",
+      "img": "assets/images/products/p4.png"
+    },
+    {
+      "name": "เครื่องหนีบถนอมเส้นผม เลอซาช่า Chic White Ceramic",
+      "detail": "Lesasha เครื่องหนีบถนอมเส้นผม เลอซาช่า Chic White Ceramic รุ่น LS0298",
+      "price": "489",
+      "img": "assets/images/products/p5.png"
+    },
+    {
+      "name": "OLAY Regenerist Overnight Miracle-Micro-Sculpting & Miracle Boost",
+      "detail": "OLAY Regenerist Overnight Miracle-Micro-Sculpting Cream 50g. & Miracle Boost Youth Pre-essence 40ml.",
+      "price": "1290",
+      "img": "assets/images/products/p6.png"
+    }
+  ],
+  "bestseller": [
+    {
+      "name": "OTTO เตารีดไฟฟ้า 1000W รุ่น EI-601 - Pink",
+      "detail": "OTTO เตารีดไฟฟ้า 1000W รุ่น EI-601 - Pink หน้าเตาเคลือบ (NON STICK) รีดเรียบไม่ติดผ้า",
+      "price": "199",
+      "img": "assets/images/products/p1.png"
+    },
+    {
+      "name": "กระเป๋าสะพายสำหรับผู้หญิง No.M2506",
+      "detail": "Marino กระเป๋า กระเป๋าสะพาย กระเป๋าสะพายสำหรับผู้หญิง No.M2506 - Black",
+      "price": "500",
+      "img": "assets/images/products/p2.png"
+    },
+    {
+      "name": "กระเป๋าเดินทาง รุ่น PARALITE ขนาด 20 นิ้ว",
+      "detail": "AMERICAN TOURISTER กระเป๋าเดินทาง รุ่น PARALITE ขนาด 20 นิ้ว (สี SNORKLE BLUE)",
+      "price": "3890",
+      "img": "assets/images/products/p3.png"
+    },
+    {
+      "name": "Vivo V5 Lite (3/32GB)",
+      "detail": "Vivo V5 Lite (3/32GB) ฟรี! ชุดของแถม (รับประกัน 1 ปี)",
+      "price": "6499",
+      "img": "assets/images/products/p4.png"
+    },
+    {
+      "name": "เครื่องหนีบถนอมเส้นผม เลอซาช่า Chic White Ceramic",
+      "detail": "Lesasha เครื่องหนีบถนอมเส้นผม เลอซาช่า Chic White Ceramic รุ่น LS0298",
+      "price": "489",
+      "img": "assets/images/products/p5.png"
+    },
+    {
+      "name": "OLAY Regenerist Overnight Miracle-Micro-Sculpting & Miracle Boost",
+      "detail": "OLAY Regenerist Overnight Miracle-Micro-Sculpting Cream 50g. & Miracle Boost Youth Pre-essence 40ml.",
+      "price": "1290",
+      "img": "assets/images/products/p6.png"
+    }
+  ],
+  "shop": [
+    {
+      "name": "Microsoft",
+      "img": "assets/images/shop/shop1.png"
+    },
+    {
+      "name": "Samsung",
+      "img": "assets/images/shop/shop2.png"
+    },
+    {
+      "name": "Converse",
+      "img": "assets/images/shop/shop3.png"
+    },
+    {
+      "name": "Fuji Film",
+      "img": "assets/images/shop/shop4.png"
+    },
+    {
+      "name": "Unilever",
+      "img": "assets/images/shop/shop5.png"
+    },
+    {
+      "name": "Nike",
+      "img": "assets/images/shop/shop6.png"
+    }
+  ]
 }
