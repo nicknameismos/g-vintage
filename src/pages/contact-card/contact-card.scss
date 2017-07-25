@@ -176,6 +176,9 @@ contact-card-page {
     }
     .txt-centr {
         text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     .txt-centr2 {
         text-align: center;
