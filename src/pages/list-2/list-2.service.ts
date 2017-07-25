@@ -10,7 +10,7 @@ export class List2Service {
   constructor(public http: Http) {}
 
   getData(): Promise<List2Model> {
-    return this.http.get('./assets/example_data/lists.json')
+    return this.http.get('./assets/example_data/productlist.json')
      .toPromise()
      .then(response => response.json() as List2Model)
      .catch(this.handleError);
