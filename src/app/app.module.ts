@@ -61,6 +61,7 @@ import { FormValidationsPage } from '../pages/form-validations/form-validations'
 import { SchedulePage } from '../pages/schedule/schedule';
 import { PaymentPage } from '../pages/payment/payment';
 import { Rating } from '../components/rating/rating';
+import { ContactService } from '../pages/contact-card/contact-card.service';
 
 
 
@@ -134,7 +135,7 @@ export function createTranslateLoader(http: Http) {
     ListingService,
     ProfileService,
     NotificationsService,
-
+    ContactService,
     // FacebookLoginService,
     // GoogleLoginService,
     // TwitterLoginService,

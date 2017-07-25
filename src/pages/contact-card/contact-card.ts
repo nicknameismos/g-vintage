@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, LoadingController } from 'ionic-angular';
 import { EmailComposer } from '@ionic-native/email-composer';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 import { ContactModel } from './contact.model';
+import { ContactService } from './contact-card.service';
 
 @Component({
   selector: 'contact-card-page',
@@ -11,14 +12,27 @@ import { ContactModel } from './contact.model';
 })
 export class ContactCardPage {
   contact: ContactModel = new ContactModel();
+  loading: any;
 
   constructor(
     public navCtrl: NavController,
     private emailComposer: EmailComposer,
-    public inAppBrowser: InAppBrowser
+    public contactService: ContactService,
+    public inAppBrowser: InAppBrowser,
+    public loadingCtrl: LoadingController
   ) {
+    this.loading = this.loadingCtrl.create();
   }
 
+  ionViewDidLoad() {
+    this.loading.present();
+    this.contactService
+      .getData()
+      .then(data => {
+        this.contact.populars = data.populars;
+        this.loading.dismiss();
+      });
+  }
   //Note: we commented this method because the Call Number plugin was unstable and causing lots of errors. If you want to use it please go: https://ionicframework.com/docs/native/call-number/
   // call(number: string){
   //   this.callNumber.callNumber(number, true)
@@ -26,9 +40,9 @@ export class ContactCardPage {
   //   .catch(() => console.log('Error launching dialer'));
   // }
 
-  sendMail(){
+  sendMail() {
     //for more option please go here: http://ionicframework.com/docs/native/email-composer/
-     let email = {
+    let email = {
       to: 'contact@ionicthemes.com',
       subject: 'This app is the best!',
       body: "Hello, I'm trying this fantastic app that will save me hours of development"
@@ -37,7 +51,7 @@ export class ContactCardPage {
     this.emailComposer.open(email);
   }
 
-  openInAppBrowser(website: string){
+  openInAppBrowser(website: string) {
     this.inAppBrowser.create(website, '_blank', "location=yes");
   }
 
