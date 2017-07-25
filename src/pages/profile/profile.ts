@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MenuController, SegmentButton, App, NavParams, LoadingController } from 'ionic-angular';
 //import { FollowersPage } from '../followers/followers';
-//import { SettingsPage } from '../settings/settings';
+import { SettingsPage } from '../settings/settings';
 import { ProfileModel } from './profile.model';
 import { ProfileService } from './profile.service';
 import { SocialSharing } from '@ionic-native/social-sharing';
@@ -61,7 +61,7 @@ export class ProfilePage {
   goToSettings() {
     // close the menu when clicking a link from the menu
     this.menu.close();
-    //this.app.getRootNav().push(SettingsPage);
+    this.app.getRootNav().push(SettingsPage);
   }
 
   onSegmentChanged(segmentButton: SegmentButton) {
