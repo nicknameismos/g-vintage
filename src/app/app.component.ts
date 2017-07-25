@@ -4,11 +4,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { Observable } from 'rxjs/Observable';
 
-// import { WalkthroughPage } from '../pages/walkthrough/walkthrough';
+import { WalkthroughPage } from '../pages/walkthrough/walkthrough';
 import { TabsNavigationPage } from '../pages/tabs-navigation/tabs-navigation';
 
 import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
-import { FormValidationsPage } from "../pages/form-validations/form-validations";
 
 @Component({
   selector: 'app-root',
@@ -19,12 +18,12 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   // make WalkthroughPage the root (or first) page
-  rootPage: any = FormValidationsPage;
+  rootPage: any = WalkthroughPage;
 
   textDir: string = "ltr";
 
-  pages: Array<{title: any, icon: string, component: any}>;
-  pushPages: Array<{title: any, icon: string, component: any}>;
+  pages: Array<{ title: any, icon: string, component: any }>;
+  pushPages: Array<{ title: any, icon: string, component: any }>;
 
   constructor(
     platform: Platform,
@@ -45,31 +44,28 @@ export class MyApp {
       this.statusBar.styleDefault();
     });
 
-    this.translate.onLangChange.subscribe((event: LangChangeEvent) =>
-      {
-        if(event.lang == 'ar')
-        {
-          platform.setDir('rtl', true);
-          platform.setDir('ltr', false);
-        }
-        else
-        {
-          platform.setDir('ltr', true);
-          platform.setDir('rtl', false);
-        }
-        Observable.forkJoin(
-          this.translate.get('HOME')
-        ).subscribe(data => {
-          this.pages = [
-            { title: data[0], icon: 'home', component: TabsNavigationPage }
-          ];
+    this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
+      if (event.lang == 'ar') {
+        platform.setDir('rtl', true);
+        platform.setDir('ltr', false);
+      }
+      else {
+        platform.setDir('ltr', true);
+        platform.setDir('rtl', false);
+      }
+      Observable.forkJoin(
+        this.translate.get('HOME')
+      ).subscribe(data => {
+        this.pages = [
+          { title: data[0], icon: 'home', component: TabsNavigationPage }
+        ];
 
-          // this.pushPages = [
-          //   { title: data[3], icon: 'grid', component: LayoutsPage },
-          //   { title: data[4], icon: 'settings', component: SettingsPage }
-          // ];
-        });
+        // this.pushPages = [
+        //   { title: data[3], icon: 'grid', component: LayoutsPage },
+        //   { title: data[4], icon: 'settings', component: SettingsPage }
+        // ];
       });
+    });
 
   }
 

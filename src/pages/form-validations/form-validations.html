@@ -20,13 +20,13 @@
 
   <ion-grid *ngIf="chk === 'true'">
     <ion-row>
-      <ion-col col-12>ชื่อ-นาสกุล</ion-col>
+      <ion-col col-12>{{user.userprofile.firstname}} {{user.userprofile.lastname}}</ion-col>
     </ion-row>
     <ion-row>
-      <ion-col col-12>ที่อยู่</ion-col>
+      <ion-col col-12>{{user.userprofile.address.address}} {{user.userprofile.address.subdistrict}} {{user.userprofile.address.district}} {{user.userprofile.address.province}} {{user.userprofile.address.postcode}}</ion-col>
     </ion-row>
     <ion-row>
-      <ion-col col-12>เบอร์โทร</ion-col>
+      <ion-col col-12>{{user.userprofile.tel}}</ion-col>
     </ion-row>
   </ion-grid>
   <form *ngIf="chk === 'false'" class="sample-form validations-form" [formGroup]="validations_form" (ngSubmit)="onSubmit(validations_form.value)">
