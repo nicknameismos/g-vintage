@@ -72,7 +72,7 @@
   <h4 class="categories-title">{{'POPULAR' | translate}}</h4>
   <ion-scroll scrollX="true" class="horizontal-categories">
      <ion-row class="categories-row">
-       <ion-col width-30 class="horizontal-item" *ngFor="let item of contact.shop.product">
+       <ion-col width-30 class="horizontal-item" *ngFor="let item of contact.shop.product" (click)="goToProductdetail()">
         <preload-image [ratio]="{w:1, h:1}" [src]="item.img" title="item.name"></preload-image>
         <p class="txt-centr">{{item.name}}</p>
         <p class="txt-centr2">{{item.price}} ฿</p>

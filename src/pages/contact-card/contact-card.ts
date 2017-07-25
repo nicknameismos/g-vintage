@@ -5,6 +5,7 @@ import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 import { ContactModel } from './contact.model';
 import { ContactService } from './contact-card.service';
+import { ProductdetailPage } from '../productdetail/productdetail';
 
 @Component({
   selector: 'contact-card-page',
@@ -32,6 +33,9 @@ export class ContactCardPage {
         this.contact.shop = data.shop;
         this.loading.dismiss();
       });
+  }
+  goToProductdetail() {
+    this.navCtrl.push(ProductdetailPage);
   }
   //Note: we commented this method because the Call Number plugin was unstable and causing lots of errors. If you want to use it please go: https://ionicframework.com/docs/native/call-number/
   // call(number: string){
