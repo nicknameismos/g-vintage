@@ -1,0 +1,13 @@
+ion-app.md {
+    productdetail-page {
+        .contact-card-content {
+            .button-bar {
+                background: $white;
+                border-radius: 6px;
+                &>.button {
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+}
