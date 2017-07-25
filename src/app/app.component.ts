@@ -19,7 +19,7 @@ export class MyApp {
 
   // make WalkthroughPage the root (or first) page
   rootPage: any = WalkthroughPage;
-  
+
   textDir: string = "ltr";
 
   pages: Array<{title: any, icon: string, component: any}>;

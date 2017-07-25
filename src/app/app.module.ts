@@ -52,8 +52,21 @@ import { NotificationsService } from '../pages/notifications/notifications.servi
 //providers
 import { LanguageService } from '../providers/language/language.service';
 
+//add new
+import { List2Page } from "../pages/list-2/list-2.ts";
+import { SettingsPage } from '../pages/settings/settings';
+import { ContactCardPage } from '../pages/contact-card/contact-card';
+import { ProductdetailPage } from '../pages/productdetail/productdetail';
+import { FormValidationsPage } from '../pages/form-validations/form-validations';
+import { SchedulePage } from '../pages/schedule/schedule';
+import { PaymentPage } from '../pages/payment/payment';
+import { Rating } from '../components/rating/rating';
+
+
+
+
 export function createTranslateLoader(http: Http) {
-	return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
 
@@ -69,7 +82,16 @@ export function createTranslateLoader(http: Http) {
     ListingPage,
     NotificationsPage,
     ProfilePage,
-    
+
+    List2Page,
+    SettingsPage,
+    ContactCardPage,
+    ProductdetailPage,
+    Rating,
+    FormValidationsPage,
+    SchedulePage,
+    PaymentPage,
+
     PreloadImage,
     BackgroundImage
   ],
@@ -77,15 +99,15 @@ export function createTranslateLoader(http: Http) {
     BrowserModule,
     HttpModule,
     IonicModule.forRoot(MyApp),
-		TranslateModule.forRoot({
-    loader: {
+    TranslateModule.forRoot({
+      loader: {
         provide: TranslateLoader,
-      	useFactory: (createTranslateLoader),
+        useFactory: (createTranslateLoader),
         deps: [Http]
-		    }
-		}),
-		VideoPlayerModule,
-		ValidatorsModule
+      }
+    }),
+    VideoPlayerModule,
+    ValidatorsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -99,6 +121,14 @@ export function createTranslateLoader(http: Http) {
     ListingPage,
     NotificationsPage,
     ProfilePage,
+    List2Page,
+    SettingsPage,
+    ContactCardPage,
+    ProductdetailPage,
+    Rating,
+    FormValidationsPage,
+    SchedulePage,
+    PaymentPage
   ],
   providers: [
     ListingService,
@@ -109,10 +139,10 @@ export function createTranslateLoader(http: Http) {
     // GoogleLoginService,
     // TwitterLoginService,
     // GoogleMapsService,
-		LanguageService,
+    LanguageService,
 
-	  SplashScreen,
-	  StatusBar,
+    SplashScreen,
+    StatusBar,
     SocialSharing,
     NativeStorage,
     InAppBrowser,
@@ -121,12 +151,12 @@ export function createTranslateLoader(http: Http) {
     Keyboard,
     Geolocation,
     TwitterConnect,
-		AdMobFree,
-		AppRate,
-		ImagePicker,
-		Crop,
-		EmailComposer
+    AdMobFree,
+    AppRate,
+    ImagePicker,
+    Crop,
+    EmailComposer
   ],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class AppModule {}
+export class AppModule { }
