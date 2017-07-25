@@ -7,6 +7,10 @@ import { Observable } from 'rxjs/Observable';
 import { WalkthroughPage } from '../pages/walkthrough/walkthrough';
 import { List2Page } from '../pages/list-2/list-2';
 import { TabsNavigationPage } from '../pages/tabs-navigation/tabs-navigation';
+
+import {ProductdetailPage} from '../pages/productdetail/productdetail';
+
+
 import { ContactCardPage } from '../pages/contact-card/contact-card';
 import { ListingPage } from '../pages/listing/listing';
 import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
