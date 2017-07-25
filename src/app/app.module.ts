@@ -46,6 +46,7 @@ import { ValidatorsModule } from '../components/validators/validators.module';
 
 //page services
 import { ListingService } from '../pages/listing/listing.service';
+import { ProductdetailService } from '../pages/productdetail/productdetail.service';
 import { ProfileService } from '../pages/profile/profile.service';
 import { NotificationsService } from '../pages/notifications/notifications.service';
 
@@ -133,7 +134,8 @@ export function createTranslateLoader(http: Http) {
   providers: [
     ListingService,
     ProfileService,
-    NotificationsService,
+    NotificationsService, 
+    ProductdetailService,
 
     // FacebookLoginService,
     // GoogleLoginService,

@@ -6,18 +6,19 @@
 
 <ion-content class="contact-card-content">
   <ion-slides class="contact-slides" pager="true" autoplay="4000" loop="false">
-    <ion-slide class="contact-slide" *ngFor="let image of contact.images">
-      <background-image class="slide-image" [src]="image"></background-image>
+    <ion-slide class="contact-slide">
+      <!-- <ion-slide class="contact-slide" *ngFor="let image of contact.images"> -->
+      <background-image class="slide-image" src="{{product.img}}"></background-image>
     </ion-slide>
   </ion-slides>
   <ion-row class="contact-details-row" wrap>
     <ion-col no-padding width-65>
-      <h2 class="contact-name">{{ contact.name }}</h2>
+      <h2 class="contact-name">{{product.name}}</h2>
     </ion-col>
     <ion-col no-padding width-35 class="rating-col">
       <div class="contact-rating">
         <ion-item class="rating-item">
-          <rating [(ngModel)]="contact.rating" max="5" read-only="true"></rating>
+          <!-- <rating [(ngModel)]="contact.rating" max="5" read-only="true"></rating> -->
         </ion-item>
       </div>
     </ion-col>
@@ -82,10 +83,10 @@
   </ion-row>
   <ion-scroll scrollX="true" class="horizontal-categories">
     <ion-row class="categories-row">
-      <ion-col width-30 class="horizontal-item" *ngFor="let popular of listing.populars">
-        <preload-image [ratio]="{w:1, h:1}" [src]="popular.image" title="popular.title"></preload-image>
-        <p class="txt-centr">{{popular.title}}</p>
-        <p class="txt-centr2">{{popular.price}} ฿</p>
+      <ion-col width-30 class="horizontal-item">
+        <preload-image [ratio]="{w:1, h:1}"></preload-image>
+        <p class="txt-centr">ttt</p>
+        <p class="txt-centr2"> ฿</p>
       </ion-col>
     </ion-row>
   </ion-scroll>
@@ -95,7 +96,7 @@
   <ion-toolbar color="primary">
     <div style="text-align: center;">
       <ion-buttons>
-        <button ion-button icon-left (click)="PaymentPage">
+        <button ion-button icon-left>
         <ion-icon name="cart"></ion-icon>Order
       </button>
       </ion-buttons>

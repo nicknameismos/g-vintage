@@ -10,13 +10,14 @@ import { ProductdetailModel } from './productdetail.model';
   templateUrl: 'productdetail.html'
 })
 export class ProductdetailPage {
-  contact: ProductdetailModel = new ProductdetailModel();
+  product: ProductdetailModel = new ProductdetailModel();
 
   constructor(
     public navCtrl: NavController,
     private emailComposer: EmailComposer,
     public inAppBrowser: InAppBrowser
   ) {
+    
   }
 
   //Note: we commented this method because the Call Number plugin was unstable and causing lots of errors. If you want to use it please go: https://ionicframework.com/docs/native/call-number/
@@ -26,9 +27,9 @@ export class ProductdetailPage {
   //   .catch(() => console.log('Error launching dialer'));
   // }
 
-  sendMail(){
+  sendMail() {
     //for more option please go here: http://ionicframework.com/docs/native/email-composer/
-     let email = {
+    let email = {
       to: 'contact@ionicthemes.com',
       subject: 'This app is the best!',
       body: "Hello, I'm trying this fantastic app that will save me hours of development"
@@ -37,7 +38,7 @@ export class ProductdetailPage {
     this.emailComposer.open(email);
   }
 
-  openInAppBrowser(website: string){
+  openInAppBrowser(website: string) {
     this.inAppBrowser.create(website, '_blank', "location=yes");
   }
 
