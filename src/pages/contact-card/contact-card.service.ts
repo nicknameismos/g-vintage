@@ -10,7 +10,7 @@ export class ContactService {
   constructor(public http: Http) {}
 
   getData(): Promise<ContactModel> {
-    return this.http.get('./assets/example_data/listing.json')
+    return this.http.get('./assets/example_data/shop.json')
      .toPromise()
      .then(response => response.json() as ContactModel)
      .catch(this.handleError);

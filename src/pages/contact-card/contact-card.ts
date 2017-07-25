@@ -29,7 +29,7 @@ export class ContactCardPage {
     this.contactService
       .getData()
       .then(data => {
-        this.contact.populars = data.populars;
+        this.contact.shop = data.shop;
         this.loading.dismiss();
       });
   }

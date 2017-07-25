@@ -11,31 +11,30 @@
       <background-image class="slide-image" [src]="image"></background-image>
     </ion-slide>
   </ion-slides> -->
-  <preload-image [ratio]="{w:4, h:2}" [src]="contact.shopimg" alt="{{ contact.name }}" title="{{ contact.name }} - {{ contact.address }}"></preload-image>
+  <preload-image [ratio]="{w:4, h:3}" style="margin-top: -100px;" [src]="contact.shop.img" alt="{{ contact.shop.name }}" title="{{ contact.shop.name }} - {{ contact.shop.detail }}"></preload-image>
 
   <ion-row class="contact-details-row" wrap>
     <ion-col no-padding width-65>
-      <h2 class="contact-name">{{ contact.name }}</h2>
+      <h2 class="contact-name">{{ contact.shop.name }}</h2>
     </ion-col>
     <ion-col no-padding width-35 class="rating-col">
-      <div class="contact-rating">
+      <!-- <div class="contact-rating">
         <ion-item class="rating-item">
           <rating [(ngModel)]="contact.rating" max="5" read-only="true"></rating>
         </ion-item>
-      </div>
+      </div> -->
     </ion-col>
     <ion-col no-padding width-100>
       <p class="contact-description">
-        Today opens from 8:30 am to 6:00 pm
+        {{ contact.shop.detail }}
       </p>
     </ion-col>
   </ion-row>
   <div class="button-bar">
-    <!-- <button ion-button primary (click)="call(contact.phone)"> -->
-    <button ion-button primary>
+     <button ion-button primary (click)="call(contact.shop.tel)"> 
       <ion-icon name="call"></ion-icon>
     </button>
-    <button ion-button primary (click)="sendMail(contact.email)">
+    <button ion-button primary (click)="sendMail(contact.shop.email)">
       <ion-icon name="mail"></ion-icon>
     </button>
     <!-- <button ion-button primary (click)="openInAppBrowser(contact.website)">
@@ -43,7 +42,7 @@
     </button> -->
   </div>
   <preload-image [ratio]="{w:4, h:2}" src="https://maps.googleapis.com/maps/api/staticmap?center=40.785091,-73.968285&zoom=15&size=400x300&scale=2&markers=icon:https://s3-us-west-2.amazonaws.com/ionicthemes-apps-assets/ion2FullApp/pin.min.png|40.785091,-73.968285"
-    alt="{{ contact.name }} location map" title="{{ contact.name }} - {{ contact.address }}"></preload-image>
+    alt="{{ contact.shop.name }} location map" title="{{ contact.shop.name }} - {{ contact.shop.detail }}"></preload-image>
   <ion-list class="details-list">
     <!-- <ion-item class="detail-item">
       <ion-avatar item-left>
@@ -61,21 +60,23 @@
       <ion-avatar item-left>
         <ion-icon name="call"></ion-icon>
       </ion-avatar>
-      <span class="detail-text">{{ contact.phone }}</span>
+      <span class="detail-text">{{ contact.shop.tel }}</span>
     </ion-item>
     <ion-item class="detail-item">
       <ion-avatar item-left>
         <ion-icon name="mail"></ion-icon>
       </ion-avatar>
-      <span class="detail-text">{{ contact.email }}</span>
+      <span class="detail-text">{{ contact.shop.email }}</span>
     </ion-item>
   </ion-list>
   <h4 class="categories-title">{{'POPULAR' | translate}}</h4>
   <ion-scroll scrollX="true" class="horizontal-categories">
-    <ion-row class="categories-row">
-       <ion-col width-30 class="horizontal-item" *ngFor="let popular of contact.populars">
-        <preload-image [ratio]="{w:1, h:1}" [src]="popular.image" title="popular.title"></preload-image>
+     <ion-row class="categories-row">
+       <ion-col width-30 class="horizontal-item" *ngFor="let item of contact.shop.product">
+        <preload-image [ratio]="{w:1, h:1}" [src]="item.img" title="item.name"></preload-image>
+        <p>{{item.name}}</p>
+        <span>{{item.price}} บาท</span>
       </ion-col> 
-    </ion-row>
+    </ion-row> 
   </ion-scroll>
 </ion-content>
