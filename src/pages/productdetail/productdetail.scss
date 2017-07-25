@@ -1,3 +1,14 @@
+@mixin categories-title-style($color) {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-size: 8vw;
+    font-weight: 900;
+    letter-spacing: 0.4px;
+    color: $color;
+    margin: 0px;
+}
+
 contact-card-page {
     $contact-card-slides-height: 45%;
     $categories-heading-image-height: 150px;
@@ -131,7 +142,8 @@ contact-card-page {
         }
     }
     .categories-title {
-        font-size: 1.2rem; // font-weight: 400;
+        font-size: 1.2rem;
+        font-weight: 400;
         letter-spacing: 0.7px;
         color: $white-d;
         margin: 8px 16px 16px;
@@ -161,5 +173,12 @@ contact-card-page {
         .horizontal-item {
             padding: 0px 0px 0px $categories-horizontal-list-padding;
         }
+    }
+    .txt-centr {
+        text-align: center;
+    }
+    .txt-centr2 {
+        text-align: center;
+        margin-top: -10px;
     }
 }

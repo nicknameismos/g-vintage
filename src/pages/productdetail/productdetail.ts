@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { EmailComposer } from '@ionic-native/email-composer';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
-
+import { SchedulePage } from "../schedule/schedule";
 import { ProductdetailModel } from './productdetail.model';
 import { ProductdetailService } from './productdetail.service';
 
@@ -23,9 +23,12 @@ export class ProductdetailPage {
       .getData()
       .then(data => {
         this.product.productdetail = data.productdetail;
+        this.product.productrelate = data.productrelate;
       });
   }
-
+goToSchedulePage(){
+  this.navCtrl.push(SchedulePage);
+}
   //Note: we commented this method because the Call Number plugin was unstable and causing lots of errors. If you want to use it please go: https://ionicframework.com/docs/native/call-number/
   // call(number: string){
   //   this.callNumber.callNumber(number, true)
