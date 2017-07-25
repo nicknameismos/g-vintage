@@ -137,13 +137,9 @@ export function createTranslateLoader(http: Http) {
     ListingService,
     ProfileService,
     NotificationsService,
-<<<<<<< HEAD
     ScheduleService,
-
-=======
     ContactService,
     List2Service,
->>>>>>> f60a88fc5853a31fd4f380b88d81852667f5cafa
     // FacebookLoginService,
     // GoogleLoginService,
     // TwitterLoginService,
