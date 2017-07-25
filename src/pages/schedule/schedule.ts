@@ -4,6 +4,7 @@ import 'rxjs/Rx';
 
 import { ScheduleModel } from './schedule.model';
 import { ScheduleService } from './schedule.service';
+import { FormValidationsPage } from "../form-validations/form-validations";
 
 @Component({
   selector: 'schedule-page',
@@ -41,6 +42,9 @@ export class SchedulePage {
 
   onSegmentSelected(segmentButton: SegmentButton) {
     // console.log('Segment selected', segmentButton.value);
+  }
+  gotoFormValidationsPage() {
+    this.nav.push(FormValidationsPage);
   }
   removeNum() {
     this.numcal -= 1;

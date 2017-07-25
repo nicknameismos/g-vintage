@@ -10,6 +10,7 @@ import { TabsNavigationPage } from '../pages/tabs-navigation/tabs-navigation';
 import { ContactCardPage } from '../pages/contact-card/contact-card';
 import { ListingPage } from '../pages/listing/listing';
 import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
+import { SchedulePage } from "../pages/schedule/schedule";
 
 @Component({
   selector: 'app-root',
@@ -20,7 +21,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   // make WalkthroughPage the root (or first) page
-  rootPage: any = WalkthroughPage;
+  rootPage: any = SchedulePage;
 
   textDir: string = "ltr";
 
