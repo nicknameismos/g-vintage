@@ -27,9 +27,9 @@
       </p>
     </ion-col>
   </ion-row>
-  <div class="button-bar">
-    <!-- <button ion-button primary (click)="call(contact.phone)"> -->
-    <button ion-button primary>
+  <!-- <div class="button-bar"> -->
+  <!-- <button ion-button primary (click)="call(contact.phone)"> -->
+  <!-- <button ion-button primary>
       <ion-icon name="call"></ion-icon>
     </button>
     <button ion-button primary (click)="sendMail(contact.email)">
@@ -38,32 +38,67 @@
     <button ion-button primary (click)="openInAppBrowser(contact.website)">
       <ion-icon name="globe"></ion-icon>
     </button>
-  </div>
-  <preload-image [ratio]="{w:4, h:3}" src="https://maps.googleapis.com/maps/api/staticmap?center=40.785091,-73.968285&zoom=15&size=400x300&scale=2&markers=icon:https://s3-us-west-2.amazonaws.com/ionicthemes-apps-assets/ion2FullApp/pin.min.png|40.785091,-73.968285" alt="{{ contact.name }} location map" title="{{ contact.name }} - {{ contact.address }}"></preload-image>
+  </div> -->
+  <!-- <preload-image [ratio]="{w:4, h:3}" src="https://maps.googleapis.com/maps/api/staticmap?center=40.785091,-73.968285&zoom=15&size=400x300&scale=2&markers=icon:https://s3-us-west-2.amazonaws.com/ionicthemes-apps-assets/ion2FullApp/pin.min.png|40.785091,-73.968285" alt="{{ contact.name }} location map" title="{{ contact.name }} - {{ contact.address }}"></preload-image> -->
+
   <ion-list class="details-list">
     <ion-item class="detail-item">
       <ion-avatar item-left>
-        <ion-icon name="pin"></ion-icon>
+        <ion-icon name="home"></ion-icon>
       </ion-avatar>
-      <span class="detail-text">{{ contact.address }}</span>
+      <span class="detail-text">iHome Shop</span>
     </ion-item>
     <ion-item class="detail-item">
       <ion-avatar item-left>
         <ion-icon name="globe"></ion-icon>
       </ion-avatar>
-      <span class="detail-text">{{ contact.website }}</span>
+      <span class="detail-text">www.iHomeshop.io</span>
     </ion-item>
     <ion-item class="detail-item">
       <ion-avatar item-left>
         <ion-icon name="call"></ion-icon>
       </ion-avatar>
-      <span class="detail-text">{{ contact.phone }}</span>
+      <span class="detail-text">084-444-4444</span>
     </ion-item>
     <ion-item class="detail-item">
       <ion-avatar item-left>
         <ion-icon name="mail"></ion-icon>
       </ion-avatar>
-      <span class="detail-text">{{ contact.email }}</span>
+      <span class="detail-text">ihomeshop_io@hotmail.com</span>
     </ion-item>
   </ion-list>
+  <ion-item-group>
+    <ion-item-divider color="light"><b>สินค้าที่เกี่ยวข้องกับร้านค้า</b>
+    </ion-item-divider>
+  </ion-item-group>
+
+
+  <ion-row>
+    <ion-col col-8>
+      <h4 class="categories-title" margin>{{'สินค้ายอดนิยม' | translate}}</h4>
+    </ion-col>
+    <ion-col col-4 text-right>
+    </ion-col>
+  </ion-row>
+  <ion-scroll scrollX="true" class="horizontal-categories">
+    <ion-row class="categories-row">
+      <ion-col width-30 class="horizontal-item" *ngFor="let popular of listing.populars">
+        <preload-image [ratio]="{w:1, h:1}" [src]="popular.image" title="popular.title"></preload-image>
+        <p class="txt-centr">{{popular.title}}</p>
+        <p class="txt-centr2">{{popular.price}} ฿</p>
+      </ion-col>
+    </ion-row>
+  </ion-scroll>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <div style="text-align: center;">
+      <ion-buttons>
+        <button ion-button icon-left (click)="PaymentPage">
+        <ion-icon name="cart"></ion-icon>Order
+      </button>
+      </ion-buttons>
+    </div>
+  </ion-toolbar>
+</ion-footer>
