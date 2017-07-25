@@ -4,10 +4,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { Observable } from 'rxjs/Observable';
 
-import { WalkthroughPage } from '../pages/walkthrough/walkthrough';
+// import { WalkthroughPage } from '../pages/walkthrough/walkthrough';
 import { TabsNavigationPage } from '../pages/tabs-navigation/tabs-navigation';
 
 import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
+import { FormValidationsPage } from "../pages/form-validations/form-validations";
 
 @Component({
   selector: 'app-root',
@@ -18,7 +19,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   // make WalkthroughPage the root (or first) page
-  rootPage: any = WalkthroughPage;
+  rootPage: any = FormValidationsPage;
 
   textDir: string = "ltr";
 
