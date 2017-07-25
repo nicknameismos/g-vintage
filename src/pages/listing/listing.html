@@ -25,7 +25,7 @@
       <h4 class="categories-title" margin>{{'รายการที่เข้าชมล่าสุด' | translate}}</h4>
     </ion-col>
     <ion-col col-4 text-right>
-      <button ion-button clear>more..</button></ion-col>
+      <button ion-button clear (click)="goToPrdList()">more..</button></ion-col>
   </ion-row>
   <ion-scroll scrollX="true" class="horizontal-categories">
     <ion-row class="categories-row">
@@ -41,14 +41,14 @@
       <h4 class="categories-title" margin>{{'ร้านค้า' | translate}}</h4>
     </ion-col>
     <ion-col col-4 text-right>
-      <button ion-button clear>more..</button></ion-col>
+      <button ion-button clear (click)="goToPrdList()">more..</button></ion-col>
   </ion-row>
-  <ion-row class="grid-categories">
-    <ion-col width-50 class="category-item" *ngFor="let shops of listing.shop">
-      <background-image tappable class="category-heading" [src]="shops.img" (click)="goToShop()">
-        <ion-row class="heading-row">
+  <ion-row class=" grid-categories ">
+    <ion-col width-50 class="category-item " *ngFor="let shops of listing.shop ">
+      <background-image tappable class="category-heading " [src]="shops.img " (click)="goToShop() ">
+        <ion-row class="heading-row ">
           <ion-col no-padding width-100>
-            <h2 class="category-title">{{shops.name}}</h2>
+            <h2 class="category-title ">{{shops.name}}</h2>
           </ion-col>
         </ion-row>
       </background-image>
@@ -56,17 +56,17 @@
   </ion-row>
   <ion-row>
     <ion-col col-8>
-      <h4 class="categories-title" margin>{{'สินค้ายอดนิยม' | translate}}</h4>
+      <h4 class="categories-title " margin>{{'สินค้ายอดนิยม' | translate}}</h4>
     </ion-col>
     <ion-col col-4 text-right>
       <button ion-button clear>more..</button></ion-col>
   </ion-row>
-  <ion-scroll scrollX="true" class="horizontal-categories">
-    <ion-row class="categories-row">
-      <ion-col width-30 class="horizontal-item" *ngFor="let bestsellers of listing.bestseller" (click)="goToPrdDetail()">
-        <preload-image [ratio]="{w:1, h:1}" [src]="bestsellers.img"></preload-image>
-        <p class="txt-centr">{{bestsellers.name}}</p>
-        <p class="txt-centr2">{{bestsellers.price}} ฿</p>
+  <ion-scroll scrollX="true " class="horizontal-categories ">
+    <ion-row class="categories-row ">
+      <ion-col width-30 class="horizontal-item " *ngFor="let bestsellers of listing.bestseller " (click)="goToPrdDetail() ">
+        <preload-image [ratio]="{w:1, h:1} " [src]="bestsellers.img "></preload-image>
+        <p class="txt-centr ">{{bestsellers.name}}</p>
+        <p class="txt-centr2 ">{{bestsellers.price}} ฿</p>
       </ion-col>
     </ion-row>
   </ion-scroll>

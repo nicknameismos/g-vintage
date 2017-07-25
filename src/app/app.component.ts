@@ -8,7 +8,7 @@ import { WalkthroughPage } from '../pages/walkthrough/walkthrough';
 import { List2Page } from '../pages/list-2/list-2';
 import { TabsNavigationPage } from '../pages/tabs-navigation/tabs-navigation';
 import { ContactCardPage } from '../pages/contact-card/contact-card';
-
+import { ListingPage } from '../pages/listing/listing';
 import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
 
 @Component({
@@ -20,12 +20,12 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   // make WalkthroughPage the root (or first) page
-  rootPage: any = ContactCardPage;
+  rootPage: any = ListingPage;
 
   textDir: string = "ltr";
 
-  pages: Array<{title: any, icon: string, component: any}>;
-  pushPages: Array<{title: any, icon: string, component: any}>;
+  pages: Array<{ title: any, icon: string, component: any }>;
+  pushPages: Array<{ title: any, icon: string, component: any }>;
 
   constructor(
     platform: Platform,
@@ -46,31 +46,28 @@ export class MyApp {
       this.statusBar.styleDefault();
     });
 
-    this.translate.onLangChange.subscribe((event: LangChangeEvent) =>
-      {
-        if(event.lang == 'ar')
-        {
-          platform.setDir('rtl', true);
-          platform.setDir('ltr', false);
-        }
-        else
-        {
-          platform.setDir('ltr', true);
-          platform.setDir('rtl', false);
-        }
-        Observable.forkJoin(
-          this.translate.get('HOME')
-        ).subscribe(data => {
-          this.pages = [
-            { title: data[0], icon: 'home', component: TabsNavigationPage }
-          ];
+    this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
+      if (event.lang == 'ar') {
+        platform.setDir('rtl', true);
+        platform.setDir('ltr', false);
+      }
+      else {
+        platform.setDir('ltr', true);
+        platform.setDir('rtl', false);
+      }
+      Observable.forkJoin(
+        this.translate.get('HOME')
+      ).subscribe(data => {
+        this.pages = [
+          { title: data[0], icon: 'home', component: TabsNavigationPage }
+        ];
 
-          // this.pushPages = [
-          //   { title: data[3], icon: 'grid', component: LayoutsPage },
-          //   { title: data[4], icon: 'settings', component: SettingsPage }
-          // ];
-        });
+        // this.pushPages = [
+        //   { title: data[3], icon: 'grid', component: LayoutsPage },
+        //   { title: data[4], icon: 'settings', component: SettingsPage }
+        // ];
       });
+    });
 
   }
 
