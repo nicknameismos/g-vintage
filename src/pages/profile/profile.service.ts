@@ -13,7 +13,7 @@ export class ProfileService {
   ) {}
 
   getData(): Promise<ProfileModel> {
-    return this.http.get('./assets/example_data/profile.json')
+    return this.http.get('./assets/example_data/userprofile.json')
      .toPromise()
      .then(response => response.json() as ProfileModel)
      .catch(this.handleError);

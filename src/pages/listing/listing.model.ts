@@ -1,6 +1,8 @@
 export class ListingModel {
-  populars: Array<ListingItemModel>;
-  categories: Array<ListingItemModel>;
+  lastview: Array<ListingItemModel>;
+  bestseller: Array<ListingItemModel>;
+  shop: Array<ListingItemModel>;
+
   banner_title: string;
   banner_image: string;
 }
@@ -8,4 +10,6 @@ export class ListingModel {
 export class ListingItemModel {
   title: string;
   image: string;
+  price: string;
+  detail: string;
 }

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MenuController, SegmentButton, App, NavParams, LoadingController } from 'ionic-angular';
 //import { FollowersPage } from '../followers/followers';
-//import { SettingsPage } from '../settings/settings';
+import { SettingsPage } from '../settings/settings';
 import { ProfileModel } from './profile.model';
 import { ProfileService } from './profile.service';
 import { SocialSharing } from '@ionic-native/social-sharing';
@@ -16,6 +16,7 @@ export class ProfilePage {
   display: string;
   profile: ProfileModel = new ProfileModel();
   loading: any;
+  address: any = {};
 
   constructor(
     public menu: MenuController,
@@ -35,6 +36,8 @@ export class ProfilePage {
     this.profileService.getData()
       .then(data => {
         this.profile.user = data.user;
+        this.profile.userprofile = data.userprofile;
+        this.address = data.userprofile.address;
         this.profile.following = data.following;
         this.profile.followers = data.followers;
         this.profile.posts = data.posts;
@@ -61,7 +64,7 @@ export class ProfilePage {
   goToSettings() {
     // close the menu when clicking a link from the menu
     this.menu.close();
-    //this.app.getRootNav().push(SettingsPage);
+    this.app.getRootNav().push(SettingsPage);
   }
 
   onSegmentChanged(segmentButton: SegmentButton) {
@@ -73,15 +76,15 @@ export class ProfilePage {
   }
 
   sharePost(post) {
-   //this code is to use the social sharing plugin
-   // message, subject, file, url
-   this.socialSharing.share(post.description, post.title, post.image)
-   .then(() => {
-     console.log('Success!');
-   })
-   .catch(() => {
-      console.log('Error');
-   });
+    //this code is to use the social sharing plugin
+    // message, subject, file, url
+    this.socialSharing.share(post.description, post.title, post.image)
+      .then(() => {
+        console.log('Success!');
+      })
+      .catch(() => {
+        console.log('Error');
+      });
   }
 
 }
