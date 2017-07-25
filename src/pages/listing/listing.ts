@@ -1,3 +1,4 @@
+import { ProductdetailPage } from '../productdetail/productdetail';
 import { Component } from '@angular/core';
 import { NavController, LoadingController } from 'ionic-angular';
 
@@ -32,8 +33,9 @@ export class ListingPage {
       .then(data => {
         this.listing.banner_image = data.banner_image;
         this.listing.banner_title = data.banner_title;
-        this.listing.populars = data.populars;
-        this.listing.categories = data.categories;
+        this.listing.lastview = data.lastview;
+        this.listing.shop = data.shop;
+        this.listing.bestseller = data.bestseller;
         this.loading.dismiss();
       });
   }
@@ -43,5 +45,12 @@ export class ListingPage {
     console.log("Clicked goToFeed", category);
     // this.nav.push(FeedPage, { category: category });
   }
-
+  goToPrdDetial() {
+    this.nav.push(ProductdetailPage);
+  }
+  goToShop() {
+    // this.nav.push();
+    // goTo() {
+    //   this.nav.push(Product);
+  }
 }
