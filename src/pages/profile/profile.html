@@ -8,7 +8,7 @@
     <div class="user-details">
         <ion-row class="user-main-data-row">
             <ion-col no-padding width-33>
-                <preload-image class="user-image" [ratio]="{w:1, h:1}" [(src)]="profile.user.image" alt="profile.user.name" title="profile.user.name"></preload-image>
+                <preload-image class="user-image" [ratio]="{w:1, h:1}" [(src)]="profile.userprofile.img" alt="profile.userprofile.firstname" title="profile.userprofile.name"></preload-image>
             </ion-col>
             <ion-col no-padding>
                 <!-- <ion-row class="social-presence-row">
@@ -36,16 +36,27 @@
         </ion-row>
         <ion-row wrap class="user-bio-row">
             <ion-col no-padding width-50>
-                <h2 class="user-name">ชื่อ : {{profile.user.name}}</h2>
+                <h2 class="user-name">{{profile.userprofile.firstname}} {{profile.userprofile.lastname}}</h2>
             </ion-col>
             <ion-col no-padding width-50>
-                <span class="user-location">{{profile.user.location}}</span>
+                <span class="user-location">{{address.province}}</span>
             </ion-col>
             <ion-col no-padding width-100>
-                <p class="user-description">
-                    {{profile.user.about}} {{profile.user.about}}
+                <p class="user-description">ที่อยู่ : {{address.address + ' ' + address.subdistrict}}</p>
+                <p class="user-description">{{ address.district+ ' ' + address.province + ' ' +address.postcode}}</p>
+                <p class="user-description">อีเมลล์ : {{profile.userprofile.email}}</p>
+                <p class="user-description">โทร : {{profile.userprofile.tel}}</p>
 
-                </p>
+                <!-- {{profile.user.about}} {{profile.userprofile.about}}
+"email" : "jigkoh3@gmail.com",
+        "tel" : "0894447208",
+        "img" : "assets/images/profile/200x200suarez.png",
+        "address" :{
+            "address" : "55/7 หมู่11 ถ.ลำลูกกา",
+            "subdistrict" : "บึงคำพร้อย",
+            "district" : "ลำลูกกา",
+            "province" : "ปทุมธานี",
+            "postcode" : "12150" -->
             </ion-col>
         </ion-row>
         <!-- <ion-segment class="user-content-segment" [(ngModel)]="display" (ionChange)="onSegmentChanged($event)">

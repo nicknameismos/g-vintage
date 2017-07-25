@@ -28,6 +28,7 @@ export class SettingsPage {
   // make WalkthroughPage the root (or first) page
   rootPage: any = WalkthroughPage;
   loading: any;
+  address: any = {};
 
   profile: ProfileModel = new ProfileModel();
   languages: Array<LanguageModel>;
@@ -50,10 +51,13 @@ export class SettingsPage {
 
     this.settingsForm = new FormGroup({
       name: new FormControl(),
-      location: new FormControl(),
-      description: new FormControl(),
-      currency: new FormControl(),
-      weather: new FormControl(),
+      lastname: new FormControl(),
+      email: new FormControl(),
+      address: new FormControl(),
+      tel: new FormControl(),
+      // description: new FormControl(),
+      // currency: new FormControl(),
+      // weather: new FormControl(),
       notifications: new FormControl(),
       language: new FormControl()
     });
@@ -63,16 +67,23 @@ export class SettingsPage {
     this.loading.present();
     this.profileService.getData().then(data => {
       this.profile.user = data.user;
+      this.profile.userprofile = data.userprofile;
+      this.address = data.userprofile.address;
+
 
       // setValue: With setValue, you assign every form control value at once by passing in a data object whose properties exactly match the form model behind the FormGroup.
       // patchValue: With patchValue, you can assign values to specific controls in a FormGroup by supplying an object of key/value pairs for just the controls of interest.
       // More info: https://angular.io/docs/ts/latest/guide/reactive-forms.html#!#populate-the-form-model-with-_setvalue_-and-_patchvalue_
       this.settingsForm.patchValue({
-        name: data.user.name,
-        location: data.user.location,
-        description: data.user.about,
-        currency: 'dollar',
-        weather: 'fahrenheit',
+
+        name: data.userprofile.firstname,
+        lastname: data.userprofile.lastname,
+        email: data.userprofile.email,
+        address: this.address.address + ' ' + this.address.subdistrict + ' ' + this.address.district + ' ' + this.address.province + ' ' + this.address.postcode ,
+        tel: data.userprofile.tel,
+        // description: data.user.about,
+        // currency: 'dollar',
+        // weather: 'fahrenheit',
         notifications: true,
         language: this.languages[0]
       });
@@ -100,10 +111,10 @@ export class SettingsPage {
     modal.present();
   }
 
-  setLanguage(lang: LanguageModel){
+  setLanguage(lang: LanguageModel) {
     let language_to_set = this.translate.getDefaultLang();
 
-    if(lang){
+    if (lang) {
       language_to_set = lang.code;
     }
 
@@ -111,7 +122,7 @@ export class SettingsPage {
     this.translate.use(language_to_set);
   }
 
-  rateApp(){
+  rateApp() {
     this.appRate.preferences.storeAppURL = {
       ios: '<my_app_id>',
       android: 'market://details?id=<package_name>',
@@ -121,29 +132,29 @@ export class SettingsPage {
     this.appRate.promptForRating(true);
   }
 
-  openImagePicker(){
-   this.imagePicker.hasReadPermission().then(
-     (result) => {
-       if(result == false){
-         // no callbacks required as this opens a popup which returns async
-         this.imagePicker.requestReadPermission();
-       }
-       else if(result == true){
-         this.imagePicker.getPictures({ maximumImagesCount: 1 }).then(
-           (results) => {
-             for (var i = 0; i < results.length; i++) {
-               this.cropService.crop(results[i], {quality: 75}).then(
-                 newImage => {
-                   this.profileService.setUserImage(newImage);
-                   this.profile.user.image = newImage;
-                 },
-                 error => console.error("Error cropping image", error)
-               );
-             }
-           }, (err) => console.log(err)
-         );
-       }
-     }
-   )
+  openImagePicker() {
+    this.imagePicker.hasReadPermission().then(
+      (result) => {
+        if (result == false) {
+          // no callbacks required as this opens a popup which returns async
+          this.imagePicker.requestReadPermission();
+        }
+        else if (result == true) {
+          this.imagePicker.getPictures({ maximumImagesCount: 1 }).then(
+            (results) => {
+              for (var i = 0; i < results.length; i++) {
+                this.cropService.crop(results[i], { quality: 75 }).then(
+                  newImage => {
+                    this.profileService.setUserImage(newImage);
+                    this.profile.user.image = newImage;
+                  },
+                  error => console.error("Error cropping image", error)
+                );
+              }
+            }, (err) => console.log(err)
+          );
+        }
+      }
+    )
   }
 }

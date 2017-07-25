@@ -13,7 +13,7 @@
     <div class="user-image-content">
         <ion-row no-padding class="user-image-row">
             <ion-col no-padding width-40>
-                <preload-image class="user-image" [ratio]="{w:1, h:1}" [src]="profile.user.image" alt="this is the image" title="IMAGE!"></preload-image>
+                <preload-image class="user-image" [ratio]="{w:1, h:1}" [src]="profile.userprofile.img" alt="this is the image" title="IMAGE!"></preload-image>
             </ion-col>
         </ion-row>
         <ion-row no-padding class="user-image-row">
@@ -30,12 +30,20 @@
                 <ion-input type="text" formControlName="name"></ion-input>
             </ion-item>
             <ion-item>
-                <ion-label stacked>{{ 'LOCATION' | translate }}</ion-label>
-                <ion-input type="text" formControlName="location"></ion-input>
+                <ion-label stacked>{{ 'LAST NAME' | translate }}</ion-label>
+                <ion-input type="text" formControlName="lastname"></ion-input>
             </ion-item>
             <ion-item>
-                <ion-label stacked>{{ 'DESCRIPTION' | translate }}</ion-label>
-                <ion-textarea formControlName="description" rows="5" placeholder="Your description here..."></ion-textarea>
+                <ion-label stacked>{{ 'EMAIL' | translate }}</ion-label>
+                <ion-input type="text" formControlName="email"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label stacked>{{ 'TEL' | translate }}</ion-label>
+                <ion-input type="text" formControlName="tel"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label stacked>{{ 'ADDRESS' | translate }}</ion-label>
+                <ion-textarea formControlName="address" rows="5"></ion-textarea>
             </ion-item>
         </ion-list>
 
