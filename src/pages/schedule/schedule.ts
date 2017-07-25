@@ -13,6 +13,7 @@ export class SchedulePage {
   segment: string;
   schedule: ScheduleModel = new ScheduleModel();
   loading: any;
+  numcal: number = 0;
 
   constructor(
     public nav: NavController,
@@ -41,5 +42,10 @@ export class SchedulePage {
   onSegmentSelected(segmentButton: SegmentButton) {
     // console.log('Segment selected', segmentButton.value);
   }
-
+  removeNum() {
+    this.numcal -= 1;
+  }
+  addNum() {
+    this.numcal += 1;
+  }
 }
