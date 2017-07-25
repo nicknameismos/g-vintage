@@ -74,8 +74,8 @@
      <ion-row class="categories-row">
        <ion-col width-30 class="horizontal-item" *ngFor="let item of contact.shop.product">
         <preload-image [ratio]="{w:1, h:1}" [src]="item.img" title="item.name"></preload-image>
-        <p>{{item.name}}</p>
-        <span>{{item.price}} บาท</span>
+        <p class="txt-centr">{{item.name}}</p>
+        <p class="txt-centr2">{{item.price}} ฿</p>
       </ion-col> 
     </ion-row> 
   </ion-scroll>
