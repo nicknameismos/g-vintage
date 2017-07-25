@@ -6,13 +6,13 @@ import { ScheduleModel } from './schedule.model';
 
 @Injectable()
 export class ScheduleService {
-  constructor(public http: Http) {}
+  constructor(public http: Http) { }
 
   getData(): Promise<ScheduleModel> {
-    return this.http.get('./assets/example_data/schedule.json')
-     .toPromise()
-     .then(response => response.json() as ScheduleModel)
-     .catch(this.handleError);
+    return this.http.get('./assets/example_data/productlist.json')
+      .toPromise()
+      .then(response => response.json() as ScheduleModel)
+      .catch(this.handleError);
   }
 
   private handleError(error: any): Promise<any> {

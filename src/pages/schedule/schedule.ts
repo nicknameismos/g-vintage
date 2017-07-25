@@ -15,6 +15,7 @@ export class SchedulePage {
   schedule: ScheduleModel = new ScheduleModel();
   loading: any;
   numcal: number = 0;
+  prodlist: any = { items: [] };
 
   constructor(
     public nav: NavController,
@@ -30,6 +31,8 @@ export class SchedulePage {
     this.scheduleService
       .getData()
       .then(data => {
+        console.log(data);
+        this.prodlist = data;
         this.schedule.today = data.today;
         this.schedule.upcoming = data.upcoming;
         this.loading.dismiss();

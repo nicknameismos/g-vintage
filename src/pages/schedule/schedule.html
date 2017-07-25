@@ -17,22 +17,22 @@
   <div>
     <div>
       <ion-list class="schedule-list">
-        <ion-item class="schedule-item" *ngFor="let item of schedule.today">
+        <ion-item class="schedule-item" *ngFor="let item of prodlist.items">
           <ion-row>
             <ion-col col-2 class="schedule-date">
-              <img src="http://xiostorage.com/wp-content/uploads/2015/10/test.png" alt="">
+              <img [src]="item.img" alt="">
             </ion-col>
             <ion-col col-7 class="schedule-data">
               <div class="data-item">
                 <div class="item-content">
-                  <h2 class="item-title one-line">{{item.subject}}</h2>
+                  <h2 class="item-title one-line">{{item.name}}</h2>
                   <div class="item-description">
                     <!-- <ion-icon class="description-icon" name="clock"></ion-icon> -->
                     <p class="description-text">{{item.price}} บาท</p>
                   </div>
                   <div class="item-description">
                     <!-- <ion-icon class="description-icon" name="navigate"></ion-icon> -->
-                    <p class="description-text one-line">{{item.location}}</p>
+                    <p class="description-text one-line">{{item.detail}}</p>
                   </div>
 
 
@@ -116,6 +116,6 @@
 
 <ion-footer>
   <ion-navbar>
-    <button ion-button full>ดำเนินการชำระเงิน</button>
+    <button ion-button full (click)="gotoFormValidationsPage()">ดำเนินการชำระเงิน</button>
   </ion-navbar>
 </ion-footer>

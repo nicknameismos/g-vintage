@@ -1,7 +1,8 @@
 export class EventModel {
-  subject: string;
-  location: string;
-  date: EventDate;
+  name: string;
+  detail: string;
+  price: string;
+  img: string;
 }
 
 export class ScheduleModel {
