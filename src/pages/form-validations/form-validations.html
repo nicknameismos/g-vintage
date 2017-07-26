@@ -4,112 +4,181 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding class="forms-validations-content">
-  <h2 class="section-title">ที่อยู่จัดส่ง</h2>
-  <ion-list radio-group [(ngModel)]="chk">
-    <ion-item>
-      <ion-label>ที่อยู่เดิม</ion-label>
-      <ion-radio checked="true" value="true"></ion-radio>
-    </ion-item>
+<ion-content class="forms-validations-content">
+  <ion-segment [(ngModel)]="testing" class="forms-examples-segment">
+    <ion-segment-button value="address">Address</ion-segment-button>
+    <ion-segment-button value="payment">Payment</ion-segment-button>
+    <ion-segment-button value="chkout">Check Out</ion-segment-button>
+  </ion-segment>
 
-    <ion-item>
-      <ion-label>ที่อยู่ใหม่</ion-label>
-      <ion-radio value="false"></ion-radio>
-    </ion-item>
+
+  <ion-list padding *ngIf="testing === 'address'" ngSelected="selected">
+    <h3 class="section-title" style="
+    margin-top: 5%;">ที่อยู่จัดส่ง</h3>
+
+    <ion-list class="radio-group" radio-group [(ngModel)]="chk">
+      <ion-item class="radio-item">
+        <ion-label>ที่อยู่เดิม</ion-label>
+        <ion-radio item-left checked value="true"></ion-radio>
+      </ion-item>
+      <ion-item class="radio-item">
+        <ion-label>ที่อยู่ใหม่</ion-label>
+        <ion-radio item-left value="false"></ion-radio>
+      </ion-item>
+    </ion-list>
+
+    <ion-grid padding class="forms-examples-segment" *ngIf="chk === 'true'">
+      <ion-row>
+        <ion-col col-12>{{user.userprofile.firstname}} {{user.userprofile.lastname}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-12>{{user.userprofile.address.address}} {{user.userprofile.address.subdistrict}} {{user.userprofile.address.district}}
+          {{user.userprofile.address.province}} {{user.userprofile.address.postcode}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-12>{{user.userprofile.tel}}</ion-col>
+      </ion-row>
+    </ion-grid>
+    <form class="forms-examples-segment" *ngIf="chk === 'false'" class="sample-form validations-form" [formGroup]="validations_form"
+      (ngSubmit)="onSubmit(validations_form.value)">
+      <section class="form-section">
+
+        <ion-item>
+          <ion-label floating>ชื่อ-นาสกุล</ion-label>
+          <ion-input type="text" formControlName="name" class="form-controll" required></ion-input>
+        </ion-item>
+        <div class="validation-errors">
+          <ng-container *ngFor="let validation of validation_messages.name">
+            <div class="error-message" *ngIf="validations_form.get('name').hasError(validation.type) && (validations_form.get('name').dirty || validations_form.get('name').touched)">
+              {{ validation.message }}
+            </div>
+          </ng-container>
+        </div>
+
+        <ion-item>
+          <ion-label floating>ที่อยู่</ion-label>
+          <ion-input type="textarea" formControlName="address" class="form-controll" required></ion-input>
+        </ion-item>
+        <div class="validation-errors">
+          <ng-container *ngFor="let validation of validation_messages.address">
+            <div class="error-message" *ngIf="validations_form.get('address').hasError(validation.type) && (validations_form.get('address').dirty || validations_form.get('address').touched)">
+              {{ validation.message }}
+            </div>
+          </ng-container>
+        </div>
+
+        <ion-item>
+          <ion-label floating>รหัสไปรษณีย์</ion-label>
+          <ion-input type="text" formControlName="postcode" class="form-controll" required></ion-input>
+        </ion-item>
+        <div class="validation-errors">
+          <ng-container *ngFor="let validation of validation_messages.postcode">
+            <div class="error-message" *ngIf="validations_form.get('postcode').hasError(validation.type) && (validations_form.get('postcode').dirty || validations_form.get('postcode').touched)">
+              {{ validation.message }}
+            </div>
+          </ng-container>
+        </div>
+
+        <ion-item>
+          <ion-label floating>จังหวัด</ion-label>
+          <ion-input type="text" formControlName="province" class="form-controll" required></ion-input>
+        </ion-item>
+        <div class="validation-errors">
+          <ng-container *ngFor="let validation of validation_messages.province">
+            <div class="error-message" *ngIf="validations_form.get('province').hasError(validation.type) && (validations_form.get('province').dirty || validations_form.get('province').touched)">
+              {{ validation.message }}
+            </div>
+          </ng-container>
+        </div>
+
+        <ion-item>
+          <ion-label floating>เขต</ion-label>
+          <ion-input type="text" formControlName="district" class="form-controll" required></ion-input>
+        </ion-item>
+        <div class="validation-errors">
+          <ng-container *ngFor="let validation of validation_messages.district">
+            <div class="error-message" *ngIf="validations_form.get('district').hasError(validation.type) && (validations_form.get('district').dirty || validations_form.get('district').touched)">
+              {{ validation.message }}
+            </div>
+          </ng-container>
+        </div>
+
+        <ion-item>
+          <ion-label floating>เบอร์ติดต่อ</ion-label>
+          <ion-input type="text" formControlName="tel" class="form-controll" required></ion-input>
+        </ion-item>
+        <div class="validation-errors">
+          <ng-container *ngFor="let validation of validation_messages.tel">
+            <div class="error-message" *ngIf="validations_form.get('tel').hasError(validation.type) && (validations_form.get('tel').dirty || validations_form.get('tel').touched)">
+              {{ validation.message }}
+            </div>
+          </ng-container>
+        </div>
+
+      </section>
+
+    </form>
+    <p>
+      Select your Deilvery options:
+    </p>
+    <ion-grid padding class="forms-examples-segment">
+      <ion-row>
+        <ion-col col-5 class="horizontal-item">
+          <preload-image [ratio]="{w:1, h:1}" [src]="user.userprofile.img"></preload-image>
+        </ion-col>
+        <ion-col col-7 class="horizontal-item">
+          <p class="txt-centr">{{user.userprofile.firstname}}</p>
+          <p class="txt-centr2">qty</p>
+          <p class="txt-centr2">{{user.userprofile.firstname}} ฿</p>
+        </ion-col>
+      </ion-row>
+      <p>
+        Deilvery options:
+      </p>
+      <ion-list class="radio-tags" radio-group>
+
+        <ion-row>
+          <ion-col col-6>
+            <ion-item class="radio-tag">
+              <ion-label>
+
+                <p class="txt-centr">{{user.userprofile.firstname}}</p>
+                <p class="txt-centr2">{{user.userprofile.firstname}} ฿</p>
+                <p class="txt-centr2">qty</p>
+
+              </ion-label>
+              <ion-radio value="any"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col col-6>
+            <ion-item class="radio-tag">
+              <ion-label>
+                <p class="txt-centr">{{user.userprofile.firstname}}</p>
+                <p class="txt-centr2">{{user.userprofile.firstname}} ฿</p>
+                <p class="txt-centr2">qty</p>
+              </ion-label>
+              <ion-radio value="1"></ion-radio>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+
+      </ion-list>
+    </ion-grid>
+    <button ion-button icon-left (click)="gotoStep2()">
+        Continue
+      </button>
   </ion-list>
 
-  <ion-grid *ngIf="chk === 'true'">
-    <ion-row>
-      <ion-col col-12>{{user.userprofile.firstname}} {{user.userprofile.lastname}}</ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col col-12>{{user.userprofile.address.address}} {{user.userprofile.address.subdistrict}} {{user.userprofile.address.district}} {{user.userprofile.address.province}} {{user.userprofile.address.postcode}}</ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col col-12>{{user.userprofile.tel}}</ion-col>
-    </ion-row>
-  </ion-grid>
-  <form *ngIf="chk === 'false'" class="sample-form validations-form" [formGroup]="validations_form" (ngSubmit)="onSubmit(validations_form.value)">
-    <section class="form-section">
+  <ion-list padding *ngIf="testing === 'payment'">
+    <a ion-item>
+      <ion-label>table list2</ion-label>
+    </a>
+  </ion-list>
 
-      <ion-item>
-        <ion-label floating>ชื่อ-นาสกุล</ion-label>
-        <ion-input type="text" formControlName="name" class="form-controll" required></ion-input>
-      </ion-item>
-      <div class="validation-errors">
-        <ng-container *ngFor="let validation of validation_messages.name">
-          <div class="error-message" *ngIf="validations_form.get('name').hasError(validation.type) && (validations_form.get('name').dirty || validations_form.get('name').touched)">
-            {{ validation.message }}
-          </div>
-        </ng-container>
-      </div>
-
-      <ion-item>
-        <ion-label floating>ที่อยู่</ion-label>
-        <ion-input type="textarea" formControlName="address" class="form-controll" required></ion-input>
-      </ion-item>
-      <div class="validation-errors">
-        <ng-container *ngFor="let validation of validation_messages.address">
-          <div class="error-message" *ngIf="validations_form.get('address').hasError(validation.type) && (validations_form.get('address').dirty || validations_form.get('address').touched)">
-            {{ validation.message }}
-          </div>
-        </ng-container>
-      </div>
-
-      <ion-item>
-        <ion-label floating>รหัสไปรษณีย์</ion-label>
-        <ion-input type="text" formControlName="postcode" class="form-controll" required></ion-input>
-      </ion-item>
-      <div class="validation-errors">
-        <ng-container *ngFor="let validation of validation_messages.postcode">
-          <div class="error-message" *ngIf="validations_form.get('postcode').hasError(validation.type) && (validations_form.get('postcode').dirty || validations_form.get('postcode').touched)">
-            {{ validation.message }}
-          </div>
-        </ng-container>
-      </div>
-
-      <ion-item>
-        <ion-label floating>จังหวัด</ion-label>
-        <ion-input type="text" formControlName="province" class="form-controll" required></ion-input>
-      </ion-item>
-      <div class="validation-errors">
-        <ng-container *ngFor="let validation of validation_messages.province">
-          <div class="error-message" *ngIf="validations_form.get('province').hasError(validation.type) && (validations_form.get('province').dirty || validations_form.get('province').touched)">
-            {{ validation.message }}
-          </div>
-        </ng-container>
-      </div>
-
-      <ion-item>
-        <ion-label floating>เขต</ion-label>
-        <ion-input type="text" formControlName="district" class="form-controll" required></ion-input>
-      </ion-item>
-      <div class="validation-errors">
-        <ng-container *ngFor="let validation of validation_messages.district">
-          <div class="error-message" *ngIf="validations_form.get('district').hasError(validation.type) && (validations_form.get('district').dirty || validations_form.get('district').touched)">
-            {{ validation.message }}
-          </div>
-        </ng-container>
-      </div>
-
-      <ion-item>
-        <ion-label floating>เบอร์ติดต่อ</ion-label>
-        <ion-input type="text" formControlName="tel" class="form-controll" required></ion-input>
-      </ion-item>
-      <div class="validation-errors">
-        <ng-container *ngFor="let validation of validation_messages.tel">
-          <div class="error-message" *ngIf="validations_form.get('tel').hasError(validation.type) && (validations_form.get('tel').dirty || validations_form.get('tel').touched)">
-            {{ validation.message }}
-          </div>
-        </ng-container>
-      </div>
-      
-    </section>
-
-  </form>
+  <ion-list padding *ngIf="testing === 'chkout'">
+    <a ion-item>
+      <ion-label>table list</ion-label>
+    </a>
+  </ion-list>
 </ion-content>
-<ion-footer>
-  <ion-toolbar>
-    <button ion-button full (click)="goToPayment()">Continue</button>
-  </ion-toolbar>
-</ion-footer>

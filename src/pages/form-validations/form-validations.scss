@@ -6,7 +6,7 @@ form-validations-page {
   .forms-validations-content
 	{
 		background-color: color($colors, background, base);
-
+    
     .sample-form
 		{
 			.form-section
@@ -67,7 +67,42 @@ form-validations-page {
 
 				@include call-to-action-button-styles(color($colors, button, base), color($colors, button, contrast));
 			}
+    }
+    .forms-examples-segment
+		{
+			padding: 14px 0px;
+			background-color: $white;
+			@include element-shadow();
+
+			@include segment-button-styles($theme-color-2);
+
+			.segment-button
+			{
+				@include segment-text-styles($white-d);
+			}
+    }
+    
+    @include radio-tags-styles($white, $theme-color-4, $white);
+
+	.radio-tags
+	{
+		@include flex-wrap(nowrap);
+		padding: 4px;
+
+		.radio-tag
+		{
+			border-radius: 8px;
+
+			.item-inner
+			{
+				padding: 0px 8px;
+
+				ion-label {
+					margin: 8px 0px;
+				}
+			}
 		}
+	}
 
     // End generic styles
 
@@ -138,4 +173,5 @@ form-validations-page {
 
     }
   }
+  
 }

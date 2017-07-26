@@ -1,0 +1,89 @@
+{
+    "paymentservice": [
+        {
+            "name": " cashondelivery",
+            "firstname": "mick vam",
+            "deliverytype": "ส่งแบบลงทะเบียน",
+            "address": {
+                "address": "55/7 หมู่11 ถ.ลำลูกกา",
+                "subdistrict": "บึงคำพร้อย",
+                "district": "ลำลูกกา",
+                "province": "ปทุมธานี",
+                "postcode": "12150"
+            },
+            "img": "assets/images/payment/cashondelivery.png"
+        },
+        {
+            "name": "creditcards",
+            "deliverytype": "ส่งแบบลงทะเบียน",
+            "cards": {
+                "firstname": "pojchara Suparuakrattana",
+                "id_card": "123456789000",
+                "cvc": "010",
+                "expired Date": "12/2022",
+                "price": "2190"
+            },
+            "img": "assets/images/payment/card.png"
+        },
+        {
+            "name": "creditcards",
+            "deliverytype": "ส่งแบบEMS",
+            "cards": {
+                "firstname": "Nipaphon Jantatep",
+                "id_card": "123456449000",
+                "cvc": "910",
+                "expired Date": "12/2026",
+                "price": "590"
+            },
+            "img": "assets/images/payment/card.png"
+        },
+        {
+            "name": "counterservice",
+            "place": [
+                {
+                    "name": "sevenelevenshop",
+                    "purchasingnumber": "1234567891",
+                    "firstname": "poj Suparuakrattana",
+                    "price": "2190"
+                }
+            ],
+            "img": "assets/images/payment/7-11.jpg"
+        },
+        {
+            "name": "counterservice",
+            "place": [
+                {
+                    "name": "sevenelevenshop",
+                    "purchasingnumber": "1234567822",
+                    "firstname": "phapare wanna",
+                    "price": "2190"
+                }
+            ],
+            "img": "assets/images/payment/7-11.jpg"
+        },
+        {
+            "name": "counterservice",
+            "place": [
+                {
+                    "name": "bigc",
+                    "purchasingnumber": "1234567889",
+                    "firstname": "charry anunya",
+                    "price": "2990"
+                }
+            ],
+            "img": "assets/images/payment/big-c.jpg"
+        },
+        {
+            "name": "counterservice",
+            "place": [
+                {
+                    "name": "lotusexpress",
+                    "purchasingnumber": "1234567877",
+                    "firstname": "mook amonrath",
+                    "price": "2199"
+                }
+            ],
+            "img": "assets/images/payment/main-logo.png"
+        }
+    ]
+}

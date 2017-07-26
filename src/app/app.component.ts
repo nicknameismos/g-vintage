@@ -5,6 +5,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { Observable } from 'rxjs/Observable';
 
 import { WalkthroughPage } from '../pages/walkthrough/walkthrough';
+import { SettingsPage } from '../pages/settings/settings';
 import { TabsNavigationPage } from '../pages/tabs-navigation/tabs-navigation';
 import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
 
@@ -53,16 +54,17 @@ export class MyApp {
         platform.setDir('rtl', false);
       }
       Observable.forkJoin(
-        this.translate.get('HOME')
+        this.translate.get('HOME'),
+        this.translate.get('SETTINGS')
       ).subscribe(data => {
         this.pages = [
           { title: data[0], icon: 'home', component: TabsNavigationPage }
         ];
 
-        // this.pushPages = [
-        //   { title: data[3], icon: 'grid', component: LayoutsPage },
-        //   { title: data[4], icon: 'settings', component: SettingsPage }
-        // ];
+        this.pushPages = [
+          // { title: data[3], icon: 'grid', component: LayoutsPage },
+          { title: data[1], icon: 'settings', component: SettingsPage }
+        ];
       });
     });
 
