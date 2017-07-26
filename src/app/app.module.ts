@@ -67,6 +67,7 @@ import { PaymentPage } from '../pages/payment/payment';
 import { Rating } from '../components/rating/rating';
 import { FormValidationsServiceProvider } from '../pages/form-validations/form-validations.service';
 import { ContactService } from '../pages/contact-card/contact-card.service';
+import { AddressComponent } from '../components/address/address';
 
 
 
@@ -98,7 +99,8 @@ export function createTranslateLoader(http: Http) {
     PaymentPage,
     CounterInput,
     PreloadImage,
-    BackgroundImage
+    BackgroundImage,
+    AddressComponent
   ],
   imports: [
     BrowserModule,
