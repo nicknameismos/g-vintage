@@ -38,7 +38,7 @@ export class ContactDetailModel {
 export class ContactItemModel {
 	name: string;
 	detail: string;
-	price: string;
+	price: number;
 	img: string;
 }
 export class ContactModel {
