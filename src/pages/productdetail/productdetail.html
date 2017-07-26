@@ -49,7 +49,7 @@
             <ion-avatar item-left>
                 <ion-icon name="ios-cube-outline"></ion-icon>
             </ion-avatar>
-            <span class="detail-text">{{ product.productdetail.deliverytype }}</span>
+            <span class="detail-text" *ngFor="let delivery of product.productdetail.deliverytype">{{ delivery.desc }}</span>
             
         </ion-item>
     </ion-list>
@@ -59,7 +59,7 @@
             <ion-col width-30 class="horizontal-item" *ngFor="let item of product.productrelate">
                 <preload-image [ratio]="{w:1, h:1}" [src]="item.img" title="item.name"></preload-image>
                 <p class="txt-centr">{{item.name}}</p>
-                <p class="txt-centr2">{{item.price}} ฿</p>
+                <p class="txt-centr2">{{item.price | number}} ฿</p>
             </ion-col>
         </ion-row>
     </ion-scroll>
