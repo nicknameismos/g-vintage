@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Validators, FormBuilder, FormGroup, FormControl } from '@angular/forms';
-import { NavController } from 'ionic-angular';
+import { NavController, Events } from 'ionic-angular';
 
 import { UsernameValidator } from '../../components/validators/username.validator';
 import { PasswordValidator } from '../../components/validators/password.validator';
@@ -40,7 +40,7 @@ export class FormValidationsPage {
   profile: User = new User();
   testing: string = 'address';
 
-  constructor(public navCtrl: NavController, public formBuilder: FormBuilder, public formValidationsServiceProvider: FormValidationsServiceProvider) {
+  constructor(public navCtrl: NavController, public formBuilder: FormBuilder, public formValidationsServiceProvider: FormValidationsServiceProvider, public events: Events) {
 
     this.formValidationsServiceProvider.getUser()
       .then(data => {
@@ -48,7 +48,12 @@ export class FormValidationsPage {
         this.profile = new User();
         this.profile = data;
       });
-
+    events.subscribe('gotoStep3', () => {
+      this.gotoStep3();
+    });
+    events.subscribe('placeorder', () => {
+      this.placeorder();
+    });
   }
 
   ionViewWillLoad() {
@@ -175,11 +180,11 @@ export class FormValidationsPage {
     this.testing = 'payment';
   }
 
-  gotoStep3(){
-    this.testing = 'review';    
+  gotoStep3() {
+    this.testing = 'review';
   }
 
-  placeorder(){
+  placeorder() {
     this.navCtrl.setRoot(ListingPage);
   }
 }

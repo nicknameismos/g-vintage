@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Events } from "ionic-angular";
+
 
 /**
  * Generated class for the ReviewgatewayComponent component.
@@ -14,9 +16,13 @@ export class ReviewgatewayComponent {
 
   text: string;
 
-  constructor() {
+  constructor(public events: Events) {
     console.log('Hello ReviewgatewayComponent Component');
     this.text = 'Hello World';
+  }
+
+  placeorder() {
+    this.events.publish('placeorder');
   }
 
 }

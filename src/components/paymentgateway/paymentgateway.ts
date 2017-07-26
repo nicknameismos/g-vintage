@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { Events } from "ionic-angular";
 /**
  * Generated class for the PaymentgatewayComponent component.
  *
@@ -14,9 +14,12 @@ export class PaymentgatewayComponent {
 
   text: string;
 
-  constructor() {
+  constructor(public events: Events) {
     console.log('Hello PaymentgatewayComponent Component');
     this.text = 'Hello World';
+  }
+  gotoStep3() {
+    this.events.publish('gotoStep3');
   }
 
 }
