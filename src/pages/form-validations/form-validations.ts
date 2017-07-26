@@ -170,7 +170,11 @@ export class FormValidationsPage {
     this.navCtrl.push(PaymentPage);
   }
 
-  gotoStep2(){
+  gotoStep2() {
     this.testing = 'payment';
+  }
+
+  gotoStep3(){
+    this.testing = 'review';    
   }
 }
