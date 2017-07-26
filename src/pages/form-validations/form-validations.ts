@@ -11,6 +11,7 @@ import { User } from './form-validations.model';
 import { address } from './form-validations.model';
 import { FormValidationsServiceProvider } from "./form-validations.service";
 import { PaymentPage } from "../payment/payment";
+import { ListingPage } from "../listing/listing";
 
 import emailMask from 'text-mask-addons/dist/emailMask';
 
@@ -176,5 +177,9 @@ export class FormValidationsPage {
 
   gotoStep3(){
     this.testing = 'review';    
+  }
+
+  placeorder(){
+    this.navCtrl.setRoot(ListingPage);
   }
 }

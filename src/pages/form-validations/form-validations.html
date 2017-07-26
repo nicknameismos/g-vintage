@@ -189,7 +189,7 @@
             <ion-item class="radio-tag">
               <ion-label>
 
-                <preload-image [ratio]="{w:1, h:1}" [src]="user.userprofile.img"></preload-image>
+                <preload-image [ratio]="{w:1, h:1}" src="assets/images/payment/card.png"></preload-image>
                 <p style="white-space: normal;">Credit or Debit Card</p>
 
               </ion-label>
@@ -199,7 +199,7 @@
           <ion-col col-4>
             <ion-item class="radio-tag">
               <ion-label>
-                <preload-image [ratio]="{w:1, h:1}" [src]="user.userprofile.img"></preload-image>
+                <preload-image [ratio]="{w:1, h:1}" src="assets/images/payment/cashondelivery.png"></preload-image>
                 <p style="white-space: normal;">Cash on Delivery</p>
               </ion-label>
               <ion-radio value="deliver"></ion-radio>
@@ -208,7 +208,7 @@
           <ion-col col-4>
             <ion-item class="radio-tag">
               <ion-label>
-                <preload-image [ratio]="{w:1, h:1}" [src]="user.userprofile.img"></preload-image>
+                <preload-image [ratio]="{w:1, h:1}" src="assets/images/payment/payment-ion.png"></preload-image>
                 <p style="white-space: normal;">Pay at Store</p>
               </ion-label>
               <ion-radio value="store"></ion-radio>
@@ -295,7 +295,7 @@
                   <ion-item class="radio-tag">
                     <ion-label>
 
-                      <preload-image [ratio]="{w:1, h:1}" [src]="user.userprofile.img"></preload-image>
+                      <preload-image [ratio]="{w:1, h:1}" src="assets/images/payment/7-11.jpg"></preload-image>
                       <p class="font-custom">7-Eleven</p>
 
                     </ion-label>
@@ -305,7 +305,7 @@
                 <ion-col col-4>
                   <ion-item class="radio-tag">
                     <ion-label>
-                      <preload-image [ratio]="{w:1, h:1}" [src]="user.userprofile.img"></preload-image>
+                      <preload-image [ratio]="{w:1, h:1}" src="assets/images/payment/big-c.jpg"></preload-image>
                       <p class="font-custom">Big C</p>
                     </ion-label>
                     <ion-radio value="bigc"></ion-radio>
@@ -314,7 +314,7 @@
                 <ion-col col-4>
                   <ion-item class="radio-tag">
                     <ion-label>
-                      <preload-image [ratio]="{w:1, h:1}" [src]="user.userprofile.img"></preload-image>
+                      <preload-image [ratio]="{w:1, h:1}" src="assets/images/payment/logo-pay-at-post.png"></preload-image>
                       <p class="font-custom">Pay@Post</p>
                     </ion-label>
                     <ion-radio value="pay"></ion-radio>
@@ -327,7 +327,7 @@
                   <ion-item class="radio-tag">
                     <ion-label>
 
-                      <preload-image [ratio]="{w:1, h:1}" [src]="user.userprofile.img"></preload-image>
+                      <preload-image [ratio]="{w:1, h:1}" src="assets/images/payment/FamilyMart.JPG"></preload-image>
                       <p class="font-custom">Family</p>
 
                     </ion-label>
@@ -337,7 +337,7 @@
                 <ion-col col-4>
                   <ion-item class="radio-tag">
                     <ion-label>
-                      <preload-image [ratio]="{w:1, h:1}" [src]="user.userprofile.img"></preload-image>
+                      <preload-image [ratio]="{w:1, h:1}" src="assets/images/payment/m-pay.jpg"></preload-image>
                       <p class="font-custom">mPay</p>
                     </ion-label>
                     <ion-radio value="mPay"></ion-radio>
@@ -346,7 +346,7 @@
                 <ion-col col-4>
                   <ion-item class="radio-tag">
                     <ion-label>
-                      <preload-image [ratio]="{w:1, h:1}" [src]="user.userprofile.img"></preload-image>
+                      <preload-image [ratio]="{w:1, h:1}" src="assets/images/payment/main-logo.png"></preload-image>
                       <p class="font-custom">Lotus</p>
                     </ion-label>
                     <ion-radio value="lotus"></ion-radio>
@@ -392,7 +392,7 @@
     </ion-list>
     <ion-row>
       <ion-col col-12>
-        <button ion-button block color="warning">Place Order</button>
+        <button ion-button block color="warning" (click)="placeorder()">Place Order</button>
       </ion-col>
     </ion-row>
     <ion-item-group>
@@ -434,7 +434,7 @@
       </ion-row>
       <ion-row>
         <ion-col col-12>
-          <button ion-button block color="warning">Place Order</button>
+          <button ion-button block color="warning" (click)="placeorder()">Place Order</button>
         </ion-col>
       </ion-row>
     </div>
