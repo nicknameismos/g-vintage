@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ListingPage } from "../listing/listing";
 
 /**
  * Generated class for the PaymentPage page.
@@ -19,6 +20,10 @@ export class PaymentPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PaymentPage');
+  }
+
+  confirm() {
+    this.navCtrl.setRoot(ListingPage);
   }
 
 }
