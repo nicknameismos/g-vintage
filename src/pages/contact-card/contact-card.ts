@@ -13,7 +13,6 @@ import { ProductdetailPage } from '../productdetail/productdetail';
 })
 export class ContactCardPage {
   contact: ContactModel = new ContactModel();
-  loading: any;
 
   constructor(
     public navCtrl: NavController,
@@ -22,18 +21,14 @@ export class ContactCardPage {
     public inAppBrowser: InAppBrowser,
     public loadingCtrl: LoadingController
   ) {
-    this.loading = this.loadingCtrl.create();
-  }
-
-  ionViewDidLoad() {
-    this.loading.present();
     this.contactService
       .getData()
       .then(data => {
         this.contact.shop = data.shop;
-        this.loading.dismiss();
       });
   }
+
+ 
   goToProductdetail() {
     this.navCtrl.push(ProductdetailPage);
   }
