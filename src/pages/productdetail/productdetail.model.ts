@@ -9,14 +9,17 @@ export class ProductdetailModel {
 	detail: string;
 	price: string;
 	img: string;
-	deliverytype: string;
+	deliverytype: Array<deliverytype>;
 }
 export class productrelateItem {
 	name: string;
 	detail: string;
 	price: string;
 	img: string;
-	deliverytype: string;
+	deliverytype: Array<deliverytype>;
+}
+export class deliverytype{
+	desc: string;
 }
 
 
