@@ -160,4 +160,8 @@ schedule-page {
 			}
 		}
 	}
+		.counter-list
+	{
+		@include counter-item-styles($white-d, $theme-color-1, $white);
+	}
 }
