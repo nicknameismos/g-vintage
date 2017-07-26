@@ -68,6 +68,7 @@ import { Rating } from '../components/rating/rating';
 import { FormValidationsServiceProvider } from '../pages/form-validations/form-validations.service';
 import { ContactService } from '../pages/contact-card/contact-card.service';
 import { AddressComponent } from '../components/address/address';
+import { PaymentgatewayComponent } from '../components/paymentgateway/paymentgateway';
 
 
 
@@ -100,7 +101,8 @@ export function createTranslateLoader(http: Http) {
     CounterInput,
     PreloadImage,
     BackgroundImage,
-    AddressComponent
+    AddressComponent,
+    PaymentgatewayComponent
   ],
   imports: [
     BrowserModule,
