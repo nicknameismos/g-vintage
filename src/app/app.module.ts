@@ -69,6 +69,7 @@ import { FormValidationsServiceProvider } from '../pages/form-validations/form-v
 import { ContactService } from '../pages/contact-card/contact-card.service';
 import { AddressComponent } from '../components/address/address';
 import { PaymentgatewayComponent } from '../components/paymentgateway/paymentgateway';
+import { ReviewgatewayComponent } from '../components/reviewgateway/reviewgateway';
 
 
 
@@ -102,7 +103,8 @@ export function createTranslateLoader(http: Http) {
     PreloadImage,
     BackgroundImage,
     AddressComponent,
-    PaymentgatewayComponent
+    PaymentgatewayComponent,
+    ReviewgatewayComponent
   ],
   imports: [
     BrowserModule,
