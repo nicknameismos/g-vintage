@@ -79,7 +79,7 @@ export class SettingsPage {
         name: data.userprofile.firstname,
         lastname: data.userprofile.lastname,
         email: data.userprofile.email,
-        address: this.address.address + ' ' + this.address.subdistrict + ' ' + this.address.district + ' ' + this.address.province + ' ' + this.address.postcode ,
+        address: this.address.address + ' ' + this.address.subdistrict + ' ' + this.address.district + ' ' + this.address.province + ' ' + this.address.postcode,
         tel: data.userprofile.tel,
         // description: data.user.about,
         // currency: 'dollar',
@@ -156,5 +156,9 @@ export class SettingsPage {
         }
       }
     )
+  }
+
+  popprofile() {
+    this.nav.pop();
   }
 }

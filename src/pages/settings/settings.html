@@ -1,7 +1,7 @@
 <ion-header>
     <ion-navbar>
         <ion-title>{{ 'SETTINGS' | translate }}</ion-title>
-        <ion-buttons end [hidden]="!settingsForm.dirty">
+        <ion-buttons end [hidden]="!settingsForm.dirty" (click)="popprofile()">
             <button ion-button>
         {{ 'SAVE' | translate }}
       </button>

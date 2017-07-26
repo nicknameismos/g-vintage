@@ -49,10 +49,16 @@ export class SchedulePage {
   gotoFormValidationsPage() {
     this.nav.push(FormValidationsPage);
   }
-  removeNum() {
-    this.numcal -= 1;
+  removeNum(item) {
+
+    item.qty -= 1;
   }
-  addNum() {
-    this.numcal += 1;
+  addNum(item) {
+    if (!item.qty) {
+      item.qty = 1;
+    } else {
+      item.qty += 1;
+    }
+
   }
 }
