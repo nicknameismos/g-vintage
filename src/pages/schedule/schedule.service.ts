@@ -2,16 +2,16 @@ import { Injectable } from "@angular/core";
 import { Http } from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
-import { ScheduleModel } from './schedule.model';
+import { EventModel } from './schedule.model';
 
 @Injectable()
 export class ScheduleService {
   constructor(public http: Http) { }
 
-  getData(): Promise<ScheduleModel> {
-    return this.http.get('./assets/example_data/productlist.json')
+  getData(): Promise<EventModel> {
+    return this.http.get('./assets/example_data/cart.json')
       .toPromise()
-      .then(response => response.json() as ScheduleModel)
+      .then(response => response.json() as EventModel)
       .catch(this.handleError);
   }
 

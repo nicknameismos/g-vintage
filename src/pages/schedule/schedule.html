@@ -59,7 +59,9 @@
                       </div>
                     </ion-col>
                     <ion-col col-7>
-                      <counter-input></counter-input>
+                      <form [formGroup]="counterForm">
+                        <counter-input formControlName="counter" counterValue="{{item.qty}}"></counter-input>
+                      </form>
                     </ion-col>
                   </ion-row>
                 </ion-col>
@@ -77,15 +79,21 @@
 
   <ion-navbar>
     <ion-row>
-      <ion-col col-4><span>จำนวนทั้งหมด</span> </ion-col>
+      <ion-col col-4><span>Qty</span> </ion-col>
       <ion-col col-2></ion-col>
       <ion-col col-2></ion-col>
-      <ion-col col-4><span>500 บาท</span></ion-col>
+      <ion-col col-4><span>{{prodlist.qty}}</span></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-4><span>Total</span> </ion-col>
+      <ion-col col-2></ion-col>
+      <ion-col col-2></ion-col>
+      <ion-col col-4><span>{{prodlist.total}} ฿</span></ion-col>
     </ion-row>
   </ion-navbar>
 
   <ion-navbar>
 
-    <button ion-button full  color="warning" (click)="gotoFormValidationsPage()">Continue</button>
+    <button ion-button full color="warning" (click)="gotoFormValidationsPage()">Continue</button>
   </ion-navbar>
 </ion-footer>
