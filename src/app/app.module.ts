@@ -24,6 +24,7 @@ import { AppRate } from '@ionic-native/app-rate';
 import { ImagePicker } from '@ionic-native/image-picker';
 import { Crop } from '@ionic-native/crop';
 import { EmailComposer } from '@ionic-native/email-composer';
+import { CounterInput } from '../components/counter-input/counter-input';
 
 
 // pages
@@ -95,7 +96,7 @@ export function createTranslateLoader(http: Http) {
     FormValidationsPage,
     SchedulePage,
     PaymentPage,
-
+    CounterInput,
     PreloadImage,
     BackgroundImage
   ],

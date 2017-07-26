@@ -16,106 +16,76 @@
 
   <div>
     <div>
-      <ion-list class="schedule-list">
-        <ion-item class="schedule-item" *ngFor="let item of prodlist.items">
+      <ion-list class="schedule-list counter-list">
+        <ion-item class="schedule-item counter-item" *ngFor="let item of prodlist.items">
           <ion-row>
-            <ion-col col-2 class="schedule-date">
-              <img [src]="item.img" alt="">
-            </ion-col>
-            <ion-col col-7 class="schedule-data">
+            <!-- <ion-col col-3 class="schedule-date">
               <div class="data-item">
                 <div class="item-content">
-                  <h2 class="item-title one-line">{{item.name}}</h2>
-                  <div class="item-description">
-                    <!-- <ion-icon class="description-icon" name="clock"></ion-icon> -->
-                    <p class="description-text">{{item.price}} บาท</p>
-                  </div>
-                  <div class="item-description">
-                    <!-- <ion-icon class="description-icon" name="navigate"></ion-icon> -->
-                    <p class="description-text one-line">{{item.detail}}</p>
-                  </div>
-
-
-                  <!-- <ion-select [(ngModel)]="toppings" multiple="true">
-                      <ion-option>Bacon</ion-option>
-                      <ion-option>Black Olives</ion-option>
-                      <ion-option>Extra Cheese</ion-option>
-                      <ion-option>Mushrooms</ion-option>
-                      <ion-option>Pepperoni</ion-option>
-                      <ion-option>Sausage</ion-option>
-                    </ion-select> -->
-
+                  <img [src]="item.img">
                 </div>
-
               </div>
-            </ion-col>
-            <ion-col col-1 class="schedule-data">
-              <ion-icon name="remove" (click)="removeNum(item)"></ion-icon>
-            </ion-col>
-            <ion-col col-1 class="schedule-data">
-              <h4>{{item.qty}}</h4>
-            </ion-col>
-            <ion-col col-1 class="schedule-data">
-              <ion-icon name="add" (click)="addNum(item)"></ion-icon>
+            </ion-col> -->
+            <ion-col col-12 class="schedule-data">
+              <ion-row>
+                <ion-col col-3>
+                  <div class="data-item">
+                    <div class="item-content">
+                      <img [src]="item.img">
+                    </div>
+                  </div>
+                </ion-col>
+                <!--  -->
+                <ion-col col-9>
+                  <ion-row>
+                    <ion-col col-12>
+                      <div class="data-item">
+                        <div class="item-content">
+                          <h2 class="item-title">{{item.name}}</h2>
+                        </div>
+                      </div>
+                    </ion-col>
+                  </ion-row>
+                  <ion-row>
+                    <ion-col col-5>
+                      <div class="data-item">
+                        <div class="item-content">
+                          <div class="item-description">
+                            <!-- <ion-icon class="description-icon" name="clock"></ion-icon> -->
+                            <p class="description-text">{{item.price}} บาท</p>
+                            <ion-icon name="trash"></ion-icon>
+                          </div>
+                        </div>
+                      </div>
+                    </ion-col>
+                    <ion-col col-7>
+                      <counter-input></counter-input>
+                    </ion-col>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+              <!--  -->
             </ion-col>
           </ion-row>
         </ion-item>
       </ion-list>
     </div>
-    <!-- <div *ngSwitchCase="'upcoming'">
-      <ion-list class="schedule-list">
-        <ion-item class="schedule-item" *ngFor="let item of schedule.upcoming">
-          <ion-row>
-            <ion-col width-20 class="schedule-date">
-              <h2 class="schedule-day">{{item.date.day}}</h2>
-              <h3 class="schedule-month">{{item.date.month_name}}</h3>
-              <h4 class="schedule-time">{{item.date.time}}</h4>
-            </ion-col>
-            <ion-col width-80 class="schedule-data">
-              <div class="data-item">
-                <div class="item-content">
-                  <h2 class="item-title one-line">{{item.subject}}</h2>
-                  <div class="item-description">
-                    <ion-icon class="description-icon" name="clock"></ion-icon>
-                    <p class="description-text">{{item.date.full}}</p>
-                  </div>
-                  <div class="item-description">
-                    <ion-icon class="description-icon" name="navigate"></ion-icon>
-                    <p class="description-text one-line">{{item.location}}</p>
-                  </div>
-                </div>
-                <ion-icon class="item-icon" name="arrow-forward"></ion-icon>
-              </div>
-            </ion-col>
-          </ion-row>
-        </ion-item>
-      </ion-list>
-    </div> -->
-  </div>
-  <div>
-    <ion-list class="schedule-list">
-      <ion-item class="schedule-item">
-        <ion-row>
-          <ion-col col-4 class="schedule-data">
-            <p>จำนวนทั้งหมด</p>
-          </ion-col>
-          <ion-col col-5 class="schedule-data">
-
-          </ion-col>
-          <ion-col col-3 class="schedule-data">
-            <p>500 บาท</p>
-          </ion-col>
-        </ion-row>
-
-      </ion-item>
-    </ion-list>
   </div>
 </ion-content>
 
-
-
 <ion-footer>
+
   <ion-navbar>
+    <ion-row>
+      <ion-col col-4><span>จำนวนทั้งหมด</span> </ion-col>
+      <ion-col col-2></ion-col>
+      <ion-col col-2></ion-col>
+      <ion-col col-4><span>500 บาท</span></ion-col>
+    </ion-row>
+  </ion-navbar>
+
+  <ion-navbar color="warning">
+
     <button ion-button full (click)="gotoFormValidationsPage()">Continue</button>
   </ion-navbar>
 </ion-footer>
