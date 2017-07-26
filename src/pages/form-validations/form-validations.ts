@@ -37,6 +37,7 @@ export class FormValidationsPage {
     }
   };
   profile: User = new User();
+  testing: string = 'address';
 
   constructor(public navCtrl: NavController, public formBuilder: FormBuilder, public formValidationsServiceProvider: FormValidationsServiceProvider) {
 
@@ -167,5 +168,9 @@ export class FormValidationsPage {
 
   goToPayment() {
     this.navCtrl.push(PaymentPage);
+  }
+
+  gotoStep2(){
+    this.testing = 'payment';
   }
 }
