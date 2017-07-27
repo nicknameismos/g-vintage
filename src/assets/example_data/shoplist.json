@@ -1,28 +1,19 @@
 {
-    "items": [
-        {
-            "name": "Microsoft",
+    "items": [{
+            "name": "ร้านอะไหล่",
             "img": "assets/images/shop/shop1.png"
         },
         {
-            "name": "Samsung",
-            "img": "assets/images/shop/shop2.png"
-        },
-        {
-            "name": "Converse",
+            "name": "ร้านเทปเก่า",
             "img": "assets/images/shop/shop3.png"
         },
         {
-            "name": "Fuji Film",
+            "name": "ร้านรองเท้า",
             "img": "assets/images/shop/shop4.png"
         },
         {
-            "name": "Unilever",
-            "img": "assets/images/shop/shop5.png"
-        },
-        {
-            "name": "Nike",
-            "img": "assets/images/shop/shop6.png"
+            "name": "เสื้อมือสอง",
+            "img": "assets/images/shop/shop2.png"
         }
     ]
 }

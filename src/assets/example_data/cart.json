@@ -1,68 +1,68 @@
 {
-  "qty": 4,
-  "total": "46490",
-  "items": [{
-      "name": "Samsung Galaxy A7 (2017) - Blue",
-      "detail": "สมาร์ทโฟนสเปคเยี่ยมกับราคาเบาๆ จาก Samsung ที่ตอบสนองทุกความต้องการอย่างลงตัวด้วย ระบบปฏิบัติการ Android เเละรวดเร็วทันใจด้วยหน่วยประมวลผลที่ดีเยี่ยม พร้อมหน้าจอขนาด 5.7 นิ้วและกล้องหลังที่มีความละเอียดถึง 16 ล้านพิกเซล ทำให้คุณสามารถถ่ายภาพได้สวยคมชัดถูกใจคุณอย่างแน่นอน",
-      "price": "11111",
-      "img": "assets/images/products/p10.png",
-      "qty": 1,
-      "total:": "11111",
-      "deliverytype": [{
-          "name": "Express Delively : Free",
-          "desc": "Get by Sat, 29 Jul 2017"
+    "qty": 4,
+    "total": "19878",
+    "items": [{
+            "name": "เสื้อเชิ้ต",
+            "detail": "ใส่สบาย เย็นฉ่ำ",
+            "price": "399",
+            "img": "assets/images/products/p10.png",
+            "qty": 1,
+            "total:": "399",
+            "deliverytype": [{
+                    "name": "Express Delively : Free",
+                    "desc": "Get by Sat, 29 Jul 2017"
+                },
+                {
+                    "name": "Standard Delively : Free",
+                    "desc": "Get by Sat, 29 - Mon, 31 Jul 2017"
+                },
+                {
+                    "name": "Economy Delively : Free",
+                    "desc": "Get by Tue, 1 - Mon, 7 Aug 2017"
+                }
+            ]
         },
         {
-          "name": "Standard Delively : Free",
-          "desc": "Get by Sat, 29 - Mon, 31 Jul 2017"
+            "name": "Samsung Galaxy J2 Prime 8GB (Gold)  ",
+            "detail": "ที่สุดแห่งสมาร์ทโฟน จากตระกูล J Series ของค่าย Samsung ที่สามารถตอบสนองการใช้งานในระดับพื้นฐานได้อย่างครบครัน Samsung Galaxy J2 Prime 8GB (Gold) สมาร์ทโฟนราคาประหยัด ขนาดเหมาะมือ และใช้งาน 4G LTE ได้ รองรับการถ่ายรูปในโหมดหน้าสวยได้ถึง 8 ระดับ",
+            "price": "3579",
+            "img": "assets/images/products/p11.png",
+            "qty": 1,
+            "total:": "3579",
+            "deliverytype": [{
+                    "name": "Express Delively : Free",
+                    "desc": "Get by Sat, 29 Jul 2017"
+                },
+                {
+                    "name": "Standard Delively : Free",
+                    "desc": "Get by Sat, 29 - Mon, 31 Jul 2017"
+                },
+                {
+                    "name": "Economy Delively : Free",
+                    "desc": "Get by Tue, 1 - Mon, 7 Aug 2017"
+                }
+            ]
         },
         {
-          "name": "Economy Delively : Free",
-          "desc": "Get by Tue, 1 - Mon, 7 Aug 2017"
+            "name": "Samsung Galaxy A9 Pro 32GB (White) ",
+            "detail": "ใหญ่กว่าและกว้างกว่า แสดงทุกรายละเอียดอย่างคมชัด ดีไซน์เมทัลและกระจกที่สวยงามประกอบด้วยจอแสดงผล Super AMOLED ขนาด 6.0 นิ้ว มอบความพึงพอใจสูงสุดในการรับชม รองรับทุกความต้องการด้านเกมและมัลติมีเดีย",
+            "price": "15900",
+            "img": "assets/images/products/p12.png",
+            "qty": 2,
+            "total:": "31800",
+            "deliverytype": [{
+                    "name": "Express Delively : Free",
+                    "desc": "Get by Sat, 29 Jul 2017"
+                },
+                {
+                    "name": "Standard Delively : Free",
+                    "desc": "Get by Sat, 29 - Mon, 31 Jul 2017"
+                },
+                {
+                    "name": "Economy Delively : Free",
+                    "desc": "Get by Tue, 1 - Mon, 7 Aug 2017"
+                }
+            ]
         }
-      ]
-    },
-    {
-      "name": "Samsung Galaxy J2 Prime 8GB (Gold)  ",
-      "detail": "ที่สุดแห่งสมาร์ทโฟน จากตระกูล J Series ของค่าย Samsung ที่สามารถตอบสนองการใช้งานในระดับพื้นฐานได้อย่างครบครัน Samsung Galaxy J2 Prime 8GB (Gold) สมาร์ทโฟนราคาประหยัด ขนาดเหมาะมือ และใช้งาน 4G LTE ได้ รองรับการถ่ายรูปในโหมดหน้าสวยได้ถึง 8 ระดับ",
-      "price": "3579",
-      "img": "assets/images/products/p11.png",
-      "qty": 1,
-      "total:": "3579",
-      "deliverytype": [{
-          "name": "Express Delively : Free",
-          "desc": "Get by Sat, 29 Jul 2017"
-        },
-        {
-          "name": "Standard Delively : Free",
-          "desc": "Get by Sat, 29 - Mon, 31 Jul 2017"
-        },
-        {
-          "name": "Economy Delively : Free",
-          "desc": "Get by Tue, 1 - Mon, 7 Aug 2017"
-        }
-      ]
-    },
-    {
-      "name": "Samsung Galaxy A9 Pro 32GB (White) ",
-      "detail": "ใหญ่กว่าและกว้างกว่า แสดงทุกรายละเอียดอย่างคมชัด ดีไซน์เมทัลและกระจกที่สวยงามประกอบด้วยจอแสดงผล Super AMOLED ขนาด 6.0 นิ้ว มอบความพึงพอใจสูงสุดในการรับชม รองรับทุกความต้องการด้านเกมและมัลติมีเดีย",
-      "price": "15900",
-      "img": "assets/images/products/p12.png",
-      "qty": 2,
-      "total:": "31800",
-      "deliverytype": [{
-          "name": "Express Delively : Free",
-          "desc": "Get by Sat, 29 Jul 2017"
-        },
-        {
-          "name": "Standard Delively : Free",
-          "desc": "Get by Sat, 29 - Mon, 31 Jul 2017"
-        },
-        {
-          "name": "Economy Delively : Free",
-          "desc": "Get by Tue, 1 - Mon, 7 Aug 2017"
-        }
-      ]
-    }
-  ]
+    ]
 }
