@@ -157,9 +157,10 @@ productdetail-page {
             contain: style layout;
         }
         preload-image {
-            border-radius: 50%;
+            // border-radius: 50%;
             img {
-                border-radius: 50%;
+                // border-radius: 50%;
+                z-index: -3;
             }
         }
         .categories-row {
@@ -175,14 +176,21 @@ productdetail-page {
         }
     }
     .txt-centr {
+        // z-index: 999;
+        
         text-align: center;
         white-space: nowrap;
         overflow: hidden;
-        text-overflow: ellipsis;
+        text-overflow: ellipsis; // width: 100% !important;
     }
-    .txt-centr2 {
+    .txt-centr2 {     
         text-align: center;
         margin-top: -10px;
+    }
+    .product-box{
+        background-color: rgba($black-c, .6);
+        margin-top: -50px;
+        color: $white;
     }
     @include radio-tags-styles($white, $theme-color-1, $white);
 
