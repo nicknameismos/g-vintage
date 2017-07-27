@@ -75,8 +75,10 @@
         <ion-row class="categories-row">
             <ion-col width-30 class="horizontal-item" *ngFor="let item of contact.shop.product" (click)="goToProductdetail()">
                 <preload-image [ratio]="{w:1, h:1}" [src]="item.img" title="item.name"></preload-image>
-                <p class="txt-centr">{{item.name}}</p>
-                <p class="txt-centr2">{{item.price | number}} ฿</p>
+                <div class="product-box">
+                    <p class="txt-centr">{{item.name}}</p>
+                    <p class="txt-centr2">{{item.price | number}} ฿</p>
+                </div>
             </ion-col>
         </ion-row>
     </ion-scroll>
