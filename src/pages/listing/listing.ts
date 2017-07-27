@@ -35,6 +35,8 @@ export class ListingPage {
       .then(data => {
         this.listing.banner_image = data.banner_image;
         this.listing.banner_title = data.banner_title;
+        this.listing.block_bg = data.block_bg;
+
         this.listing.lastview = data.lastview;
         this.listing.shop = data.shop;
         this.listing.bestseller = data.bestseller;

@@ -5,7 +5,11 @@ export class ListingModel {
 
   banner_title: string;
   banner_image: string;
+  block_bg: string;
+
+
 }
+
 
 export class ListingItemModel {
   title: string;

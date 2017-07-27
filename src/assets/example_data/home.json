@@ -1,5 +1,6 @@
 {
-    "banner_image": "./assets/images/listing/Greenlogo.png",
+    "banner_image": "./assets/images/listing/600x300banner2.jpg",
+    "block_bg": "./assets/images/listing/600x300banner3.png",
     "banner_title": "Green Vintage",
     "lastview": [{
             "name": "เสื้อยีนส์",

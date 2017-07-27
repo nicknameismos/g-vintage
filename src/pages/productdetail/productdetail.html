@@ -42,15 +42,15 @@
             <ion-avatar item-left>
                 <ion-icon name="ios-cash-outline"></ion-icon>
             </ion-avatar>
-            <span class="detail-text">{{ product.productdetail.price }}</span>
-            
+            <span class="detail-text">{{ product.productdetail.price }} ฿</span>
+
         </ion-item>
-      <ion-item class="detail-item" *ngFor="let delivery of product.productdetail.deliverytype">
+        <ion-item class="detail-item" *ngFor="let delivery of product.productdetail.deliverytype">
             <ion-avatar item-left>
                 <ion-icon name="ios-cube-outline"></ion-icon>
             </ion-avatar>
-             <span class="detail-text">{{ delivery.name }}</span>   
-            <span class="detail-text">{{ delivery.desc }}</span>    
+            <span class="detail-text">{{ delivery.name }}</span>
+            <span class="detail-text">{{ delivery.desc }}</span>
         </ion-item>
     </ion-list>
     <h4 class="categories-title">{{'Relate' | translate}}</h4>

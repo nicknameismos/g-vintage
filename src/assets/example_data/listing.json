@@ -1,8 +1,7 @@
 {
-    "banner_image": "./assets/images/listing/600x300banner2.jpg",
+    "banner_image": "./assets/images/listing/600x300banner1.png",
     "banner_title": "Green Vintage",
-    "populars": [
-        {
+    "populars": [{
             "title": "Air Sports",
             "image": "./assets/images/listing/300x300AirSports.png"
         },
@@ -27,8 +26,7 @@
             "image": "./assets/images/listing/300x300CombatSports.png"
         }
     ],
-    "categories": [
-        {
+    "categories": [{
             "title": "Basketball",
             "image": "./assets/images/listing/200x200basquet.png"
         },
