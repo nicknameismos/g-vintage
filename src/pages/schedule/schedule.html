@@ -41,7 +41,7 @@
                     <ion-col col-12>
                       <div class="data-item">
                         <div class="item-content">
-                          <h2 class="item-title">{{item.name}}</h2>
+                          <h3>{{item.name}}</h3>
                         </div>
                       </div>
                     </ion-col>
@@ -52,8 +52,7 @@
                         <div class="item-content">
                           <div class="item-description">
                             <!-- <ion-icon class="description-icon" name="clock"></ion-icon> -->
-                            <p class="description-text">{{item.price}} บาท</p>
-                            <ion-icon name="trash"></ion-icon>
+                            <h2>{{item.price | number}} ฿</h2>
                           </div>
                         </div>
                       </div>
@@ -62,6 +61,20 @@
                       <form [formGroup]="counterForm">
                         <counter-input formControlName="counter" counterValue="{{item.qty}}"></counter-input>
                       </form>
+                    </ion-col>
+                  </ion-row>
+                  <ion-row>
+                    <ion-col col-3>
+                      <div class="data-item">
+                        <div class="item-content">
+                          <div class="item-description">
+                            <ion-icon name="ios-heart"></ion-icon>
+                          </div>
+                        </div>
+                      </div>
+                    </ion-col>
+                    <ion-col col-9>
+                      <ion-icon name="ios-trash"></ion-icon>
                     </ion-col>
                   </ion-row>
                 </ion-col>
@@ -79,16 +92,10 @@
 
   <ion-navbar>
     <ion-row>
-      <ion-col col-4><span>Qty</span> </ion-col>
-      <ion-col col-2></ion-col>
-      <ion-col col-2></ion-col>
-      <ion-col col-4><span>{{prodlist.qty}}</span></ion-col>
-    </ion-row>
-    <ion-row>
       <ion-col col-4><span>Total</span> </ion-col>
       <ion-col col-2></ion-col>
       <ion-col col-2></ion-col>
-      <ion-col col-4><span>{{prodlist.total}} ฿</span></ion-col>
+      <ion-col col-4 text-right><span>{{prodlist.total | number}} ฿</span></ion-col>
     </ion-row>
   </ion-navbar>
 

@@ -5,10 +5,16 @@
         "price": "299",
         "img": "assets/images/products/p7.png",
         "deliverytype": [{
+                "name": "Get by Sat, 29 Jul 2017 Free",
+                "desc": "Express Delively"
+            },
+            {
+                "name": "Get by Sat, 29 - Mon, 31 Jul 2017 Free",
                 "desc": "Standard Delively"
             },
             {
-                "desc": "Extra Delively"
+                "name": "Get by Tue, 1 - Mon, 7 Aug 2017 Free",
+                "desc": "Economy Delively"
             }
         ]
     },
@@ -18,10 +24,16 @@
             "price": "299",
             "img": "assets/images/products/p7.png",
             "deliverytype": [{
+                    "name": "Get by Sat, 29 Jul 2017 Free",
+                    "desc": "Express Delively"
+                },
+                {
+                    "name": "Get by Sat, 29 - Mon, 31 Jul 2017 Free",
                     "desc": "Standard Delively"
                 },
                 {
-                    "desc": "Extra Delively"
+                    "name": "Get by Tue, 1 - Mon, 7 Aug 2017 Free",
+                    "desc": "Economy Delively"
                 }
             ]
         },
@@ -31,10 +43,16 @@
             "price": "199",
             "img": "assets/images/products/p8.png",
             "deliverytype": [{
+                    "name": "Get by Sat, 29 Jul 2017 Free",
+                    "desc": "Express Delively"
+                },
+                {
+                    "name": "Get by Sat, 29 - Mon, 31 Jul 2017 Free",
                     "desc": "Standard Delively"
                 },
                 {
-                    "desc": "Extra Delively"
+                    "name": "Get by Tue, 1 - Mon, 7 Aug 2017 Free",
+                    "desc": "Economy Delively"
                 }
             ]
         },
@@ -44,10 +62,16 @@
             "price": "299",
             "img": "assets/images/products/p9.png",
             "deliverytype": [{
+                    "name": "Get by Sat, 29 Jul 2017 Free",
+                    "desc": "Express Delively"
+                },
+                {
+                    "name": "Get by Sat, 29 - Mon, 31 Jul 2017 Free",
                     "desc": "Standard Delively"
                 },
                 {
-                    "desc": "Extra Delively"
+                    "name": "Get by Tue, 1 - Mon, 7 Aug 2017 Free",
+                    "desc": "Economy Delively"
                 }
             ]
         },
@@ -57,10 +81,16 @@
             "price": "399",
             "img": "assets/images/products/p10.png",
             "deliverytype": [{
+                    "name": "Get by Sat, 29 Jul 2017 Free",
+                    "desc": "Express Delively"
+                },
+                {
+                    "name": "Get by Sat, 29 - Mon, 31 Jul 2017 Free",
                     "desc": "Standard Delively"
                 },
                 {
-                    "desc": "Extra Delively"
+                    "name": "Get by Tue, 1 - Mon, 7 Aug 2017 Free",
+                    "desc": "Economy Delively"
                 }
             ]
         }

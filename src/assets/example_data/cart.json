@@ -1,20 +1,24 @@
 {
   "qty": 4,
   "total": "46490",
-  "items": [
-    {
+  "items": [{
       "name": "Samsung Galaxy A7 (2017) - Blue",
       "detail": "สมาร์ทโฟนสเปคเยี่ยมกับราคาเบาๆ จาก Samsung ที่ตอบสนองทุกความต้องการอย่างลงตัวด้วย ระบบปฏิบัติการ Android เเละรวดเร็วทันใจด้วยหน่วยประมวลผลที่ดีเยี่ยม พร้อมหน้าจอขนาด 5.7 นิ้วและกล้องหลังที่มีความละเอียดถึง 16 ล้านพิกเซล ทำให้คุณสามารถถ่ายภาพได้สวยคมชัดถูกใจคุณอย่างแน่นอน",
       "price": "11111",
       "img": "assets/images/products/p10.png",
       "qty": 1,
       "total:": "11111",
-      "deliverytype": [
-        {
-          "desc": "Standard Delively"
+      "deliverytype": [{
+          "name": "Express Delively : Free",
+          "desc": "Get by Sat, 29 Jul 2017"
         },
         {
-          "desc": "Extra Delively"
+          "name": "Standard Delively : Free",
+          "desc": "Get by Sat, 29 - Mon, 31 Jul 2017"
+        },
+        {
+          "name": "Economy Delively : Free",
+          "desc": "Get by Tue, 1 - Mon, 7 Aug 2017"
         }
       ]
     },
@@ -25,12 +29,17 @@
       "img": "assets/images/products/p11.png",
       "qty": 1,
       "total:": "3579",
-      "deliverytype": [
-        {
-          "desc": "Standard Delively"
+      "deliverytype": [{
+          "name": "Express Delively : Free",
+          "desc": "Get by Sat, 29 Jul 2017"
         },
         {
-          "desc": "Extra Delively"
+          "name": "Standard Delively : Free",
+          "desc": "Get by Sat, 29 - Mon, 31 Jul 2017"
+        },
+        {
+          "name": "Economy Delively : Free",
+          "desc": "Get by Tue, 1 - Mon, 7 Aug 2017"
         }
       ]
     },
@@ -41,12 +50,17 @@
       "img": "assets/images/products/p12.png",
       "qty": 2,
       "total:": "31800",
-      "deliverytype": [
-        {
-          "desc": "Standard Delively"
+      "deliverytype": [{
+          "name": "Express Delively : Free",
+          "desc": "Get by Sat, 29 Jul 2017"
         },
         {
-          "desc": "Extra Delively"
+          "name": "Standard Delively : Free",
+          "desc": "Get by Sat, 29 - Mon, 31 Jul 2017"
+        },
+        {
+          "name": "Economy Delively : Free",
+          "desc": "Get by Tue, 1 - Mon, 7 Aug 2017"
         }
       ]
     }
