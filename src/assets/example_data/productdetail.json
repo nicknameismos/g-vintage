@@ -43,16 +43,16 @@
             "price": "199",
             "img": "assets/images/products/p8.png",
             "deliverytype": [{
-                    "name": "Get by Sat, 29 Jul 2017 Free",
-                    "desc": "Express Delively"
+                    "name": "วันจันทร์, 1 - วันอังคาร, 2 ส.ค. 2017 ฟรี",
+                    "desc": "ส่งแบบส่งด่วน"
                 },
                 {
-                    "name": "Get by Sat, 29 - Mon, 31 Jul 2017 Free",
-                    "desc": "Standard Delively"
+                    "name": "วันจันทร์, 1 - วันศุกร์, 6 ส.ค. 2017 ฟรี",
+                    "desc": "ส่งแบบธรรม"
                 },
                 {
-                    "name": "Get by Tue, 1 - Mon, 7 Aug 2017 Free",
-                    "desc": "Economy Delively"
+                    "name": "วันจันทร์, 1 - วันศุกร์, 4 ส.ค. 2017 ฟรี",
+                    "desc": "ส่งแบบเก็บเงินปลายทาง"
                 }
             ]
         },
@@ -62,16 +62,16 @@
             "price": "299",
             "img": "assets/images/products/p9.png",
             "deliverytype": [{
-                    "name": "Get by Sat, 29 Jul 2017 Free",
-                    "desc": "Express Delively"
+                    "name": "วันจันทร์, 1 - วันอังคาร, 2 ส.ค. 2017 ฟรี",
+                    "desc": "ส่งแบบส่งด่วน"
                 },
                 {
-                    "name": "Get by Sat, 29 - Mon, 31 Jul 2017 Free",
-                    "desc": "Standard Delively"
+                    "name": "วันจันทร์, 1 - วันศุกร์, 6 ส.ค. 2017 ฟรี",
+                    "desc": "ส่งแบบธรรม"
                 },
                 {
-                    "name": "Get by Tue, 1 - Mon, 7 Aug 2017 Free",
-                    "desc": "Economy Delively"
+                    "name": "วันจันทร์, 1 - วันศุกร์, 4 ส.ค. 2017 ฟรี",
+                    "desc": "ส่งแบบเก็บเงินปลายทาง"
                 }
             ]
         },
@@ -81,16 +81,16 @@
             "price": "399",
             "img": "assets/images/products/p10.png",
             "deliverytype": [{
-                    "name": "Get by Sat, 29 Jul 2017 Free",
-                    "desc": "Express Delively"
+                    "name": "วันจันทร์, 1 - วันอังคาร, 2 ส.ค. 2017 ฟรี",
+                    "desc": "ส่งแบบส่งด่วน"
                 },
                 {
-                    "name": "Get by Sat, 29 - Mon, 31 Jul 2017 Free",
-                    "desc": "Standard Delively"
+                    "name": "วันจันทร์, 1 - วันศุกร์, 6 ส.ค. 2017 ฟรี",
+                    "desc": "ส่งแบบธรรม"
                 },
                 {
-                    "name": "Get by Tue, 1 - Mon, 7 Aug 2017 Free",
-                    "desc": "Economy Delively"
+                    "name": "วันจันทร์, 1 - วันศุกร์, 4 ส.ค. 2017 ฟรี",
+                    "desc": "ส่งแบบเก็บเงินปลายทาง"
                 }
             ]
         }
