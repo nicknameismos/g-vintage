@@ -20,6 +20,7 @@ export class productrelateItem {
 }
 export class deliverytype{
 	desc: string;
+	name: string;
 }
 
 
