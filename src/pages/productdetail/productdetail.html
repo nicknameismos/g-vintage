@@ -5,8 +5,12 @@
 </ion-header>
 
 <ion-content class="contact-card-content">
-    <preload-image [ratio]="{w:4, h:4}" [src]="product.productdetail.img" alt="{{ product.productdetail.name }}" title="{{ product.productdetail.name }} - {{ product.productdetail.detail }}"></preload-image>
-
+    <!-- <preload-image [ratio]="{w:4, h:4}" [src]="product.productdetail.img" alt="{{ product.productdetail.name }}" title="{{ product.productdetail.name }} - {{ product.productdetail.detail }}"></preload-image> -->
+    <ion-slides class="contact-slides" pager="true" autoplay="5000" loop="false">
+        <ion-slide class="contact-slide" *ngFor="let image of product.images">
+            <background-image class="slide-image" [src]="image"></background-image>
+        </ion-slide>
+    </ion-slides>
     <ion-row class="contact-details-row" wrap>
         <ion-col no-padding width-65>
             <h2 class="contact-name">{{ product.productdetail.name }}</h2>

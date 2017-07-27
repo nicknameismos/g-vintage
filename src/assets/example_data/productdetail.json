@@ -100,5 +100,11 @@
                 }
             ]
         }
+    ],
+    "images": [
+        "assets/images/products/p7.png",
+        "assets/images/products/p8.png",
+        "assets/images/products/p9.png",
+        "assets/images/products/p10.png"
     ]
 }

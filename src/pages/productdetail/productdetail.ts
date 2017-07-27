@@ -19,16 +19,24 @@ export class ProductdetailPage {
     public inAppBrowser: InAppBrowser,
     public productdetailService: ProductdetailService
   ) {
+    this.product.images = [
+      "assets/images/products/p7.png",
+      "assets/images/products/p8.png",
+      "assets/images/products/p9.png",
+      "assets/images/products/p10.png"
+    ];
+
     this.productdetailService
       .getData()
       .then(data => {
         this.product.productdetail = data.productdetail;
         this.product.productrelate = data.productrelate;
+        // this.product.images = data.images;
       });
   }
-goToSchedulePage(){
-  this.navCtrl.push(SchedulePage);
-}
+  goToSchedulePage() {
+    this.navCtrl.push(SchedulePage);
+  }
   //Note: we commented this method because the Call Number plugin was unstable and causing lots of errors. If you want to use it please go: https://ionicframework.com/docs/native/call-number/
   // call(number: string){
   //   this.callNumber.callNumber(number, true)

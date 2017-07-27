@@ -2,6 +2,7 @@ export class ProductdetailModel {
 	// productdetail: Array<productdetailitem>;
 	productdetail: productdetailitem = new productdetailitem();
 	productrelate: Array<productrelateItem>;
+	images: Array<string>;
 
 
 } export class productdetailitem {
@@ -18,7 +19,7 @@ export class productrelateItem {
 	img: string;
 	deliverytype: Array<deliverytype>;
 }
-export class deliverytype{
+export class deliverytype {
 	desc: string;
 	name: string;
 }

@@ -2,12 +2,12 @@
     "qty": 4,
     "total": "19878",
     "items": [{
-            "name": "เสื้อเชิ้ต",
+            "name": "เสื้อยีนส์",
             "detail": "ใส่สบาย เย็นฉ่ำ",
-            "price": "399",
-            "img": "assets/images/products/p10.png",
+            "price": "299",
+            "img": "assets/images/products/p7.png",
             "qty": 1,
-            "total:": "399",
+            "total:": "299",
             "deliverytype": [{
                     "name": "Express Delively : Free",
                     "desc": "Get by Sat, 29 Jul 2017"
