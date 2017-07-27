@@ -1,51 +1,51 @@
 <ion-header>
-  <ion-navbar>
-    <!-- <ion-title>{{'CONTACT_CARD' | translate}}</ion-title> -->
-    <ion-title>Shop Detail</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <!-- <ion-title>{{'CONTACT_CARD' | translate}}</ion-title> -->
+        <ion-title>รายละเอียดร้านค้า</ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content class="contact-card-content">
-  <!-- <ion-slides class="contact-slides" pager="true" autoplay="4000" loop="false">
+    <!-- <ion-slides class="contact-slides" pager="true" autoplay="4000" loop="false">
     <ion-slide class="contact-slide" *ngFor="let image of contact.images">
       <background-image class="slide-image" [src]="image"></background-image>
     </ion-slide>
   </ion-slides> -->
-  <preload-image [ratio]="{w:4, h:3}" style="margin-top: -100px;" [src]="contact.shop.img" alt="{{ contact.shop.name }}" title="{{ contact.shop.name }} - {{ contact.shop.detail }}"></preload-image>
+    <preload-image [ratio]="{w:4, h:3}" style="margin-top: -100px;" [src]="contact.shop.img" alt="{{ contact.shop.name }}" title="{{ contact.shop.name }} - {{ contact.shop.detail }}"></preload-image>
 
-  <ion-row class="contact-details-row" wrap>
-    <ion-col no-padding width-65>
-      <h2 class="contact-name">{{ contact.shop.name }}</h2>
-    </ion-col>
-    <ion-col no-padding width-35 class="rating-col">
-      <!-- <div class="contact-rating">
+    <ion-row class="contact-details-row" wrap>
+        <ion-col no-padding width-65>
+            <h2 class="contact-name">{{ contact.shop.name }}</h2>
+        </ion-col>
+        <ion-col no-padding width-35 class="rating-col">
+            <!-- <div class="contact-rating">
         <ion-item class="rating-item">
           <rating [(ngModel)]="contact.rating" max="5" read-only="true"></rating>
         </ion-item>
       </div> -->
-    </ion-col>
-    <ion-col no-padding width-100>
-      <p class="contact-description">
-        {{ contact.shop.detail }}
-      </p>
-    </ion-col>
-  </ion-row>
-  <div class="button-bar">
-    <!-- <button ion-button primary (click)="call(contact.shop.tel)">  -->
-    <button ion-button primary> 
+        </ion-col>
+        <ion-col no-padding width-100>
+            <p class="contact-description">
+                {{ contact.shop.detail }}
+            </p>
+        </ion-col>
+    </ion-row>
+    <div class="button-bar">
+        <!-- <button ion-button primary (click)="call(contact.shop.tel)">  -->
+        <button ion-button primary>
       <ion-icon name="call"></ion-icon>
     </button>
-    <button ion-button primary (click)="sendMail(contact.shop.email)">
+        <button ion-button primary (click)="sendMail(contact.shop.email)">
       <ion-icon name="mail"></ion-icon>
     </button>
-    <!-- <button ion-button primary (click)="openInAppBrowser(contact.website)">
+        <!-- <button ion-button primary (click)="openInAppBrowser(contact.website)">
       <ion-icon name="globe"></ion-icon>
     </button> -->
-  </div>
-  <preload-image [ratio]="{w:4, h:2}" src="https://maps.googleapis.com/maps/api/staticmap?center=40.785091,-73.968285&zoom=15&size=400x300&scale=2&markers=icon:https://s3-us-west-2.amazonaws.com/ionicthemes-apps-assets/ion2FullApp/pin.min.png|40.785091,-73.968285"
-    alt="{{ contact.shop.name }} location map" title="{{ contact.shop.name }} - {{ contact.shop.detail }}"></preload-image>
-  <ion-list class="details-list">
-    <!-- <ion-item class="detail-item">
+    </div>
+    <preload-image [ratio]="{w:4, h:2}" src="https://maps.googleapis.com/maps/api/staticmap?center=40.785091,-73.968285&zoom=15&size=400x300&scale=2&markers=icon:https://s3-us-west-2.amazonaws.com/ionicthemes-apps-assets/ion2FullApp/pin.min.png|40.785091,-73.968285"
+        alt="{{ contact.shop.name }} location map" title="{{ contact.shop.name }} - {{ contact.shop.detail }}"></preload-image>
+    <ion-list class="details-list">
+        <!-- <ion-item class="detail-item">
       <ion-avatar item-left>
         <ion-icon name="pin"></ion-icon>
       </ion-avatar>
@@ -57,27 +57,27 @@
       </ion-avatar>
       <span class="detail-text">{{ contact.website }}</span>
     </ion-item> -->
-    <ion-item class="detail-item">
-      <ion-avatar item-left>
-        <ion-icon name="call"></ion-icon>
-      </ion-avatar>
-      <span class="detail-text">{{ contact.shop.tel }}</span>
-    </ion-item>
-    <ion-item class="detail-item">
-      <ion-avatar item-left>
-        <ion-icon name="mail"></ion-icon>
-      </ion-avatar>
-      <span class="detail-text">{{ contact.shop.email }}</span>
-    </ion-item>
-  </ion-list>
-  <h4 class="categories-title">{{'POPULAR' | translate}}</h4>
-  <ion-scroll scrollX="true" class="horizontal-categories">
-    <ion-row class="categories-row">
-      <ion-col width-30 class="horizontal-item" *ngFor="let item of contact.shop.product" (click)="goToProductdetail()">
-        <preload-image [ratio]="{w:1, h:1}" [src]="item.img" title="item.name"></preload-image>
-        <p class="txt-centr">{{item.name}}</p>
-        <p class="txt-centr2">{{item.price | number}} ฿</p>
-      </ion-col>
-    </ion-row>
-  </ion-scroll>
+        <ion-item class="detail-item">
+            <ion-avatar item-left>
+                <ion-icon name="call"></ion-icon>
+            </ion-avatar>
+            <span class="detail-text">{{ contact.shop.tel }}</span>
+        </ion-item>
+        <ion-item class="detail-item">
+            <ion-avatar item-left>
+                <ion-icon name="mail"></ion-icon>
+            </ion-avatar>
+            <span class="detail-text">{{ contact.shop.email }}</span>
+        </ion-item>
+    </ion-list>
+    <h4 class="categories-title">{{'สินค้ายอดนิยม'}}</h4>
+    <ion-scroll scrollX="true" class="horizontal-categories">
+        <ion-row class="categories-row">
+            <ion-col width-30 class="horizontal-item" *ngFor="let item of contact.shop.product" (click)="goToProductdetail()">
+                <preload-image [ratio]="{w:1, h:1}" [src]="item.img" title="item.name"></preload-image>
+                <p class="txt-centr">{{item.name}}</p>
+                <p class="txt-centr2">{{item.price | number}} ฿</p>
+            </ion-col>
+        </ion-row>
+    </ion-scroll>
 </ion-content>
