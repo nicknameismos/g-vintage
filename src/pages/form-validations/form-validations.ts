@@ -186,5 +186,6 @@ export class FormValidationsPage {
 
   placeorder() {
     this.navCtrl.setRoot(ListingPage);
+    this.events.unsubscribe('placeorder');
   }
 }
