@@ -6,7 +6,7 @@
         <ion-title>
             <div class="header-logo">
                 <!-- <preload-image [ratio]="{w:583, h:100}" src="./assets/images/header_logo_white.png"></preload-image> -->
-                HOME
+                หน้าหลัก
             </div>
         </ion-title>
     </ion-navbar>
@@ -22,28 +22,30 @@
     </background-image>
     <ion-row>
         <ion-col col-8>
-            <h4 class="categories-title" margin>Recent</h4>
+            <h4 class="categories-title" margin>สินค้าที่เข้าดูล่าสุด</h4>
         </ion-col>
         <ion-col col-4 text-right>
-            <button ion-button clear (click)="goToPrdList()">more..</button></ion-col>
+            <button ion-button small color="favorite" (click)="goToPrdList()">เพิ่มเติม</button></ion-col>
     </ion-row>
     <ion-scroll scrollX="true" class="horizontal-categories">
 
         <ion-row class="categories-row">
             <ion-col width-30 class="horizontal-item" *ngFor="let lastviews of listing.lastview" (click)="goToPrdDetail()">
                 <preload-image [ratio]="{w:1, h:1}" [src]="lastviews.img"></preload-image>
-                <p class="txt-centr">{{lastviews.name}}</p>
-                <p class="txt-centr2">{{lastviews.price | number}} ฿</p>
+                <div class="product-box">
+                    <p class="txt-centr">{{lastviews.name}}</p>
+                    <p class="txt-centr2">{{lastviews.price | number}} ฿</p>
+                </div>
             </ion-col>
         </ion-row>
 
     </ion-scroll>
     <ion-row>
         <ion-col col-8>
-            <h4 class="categories-title" margin>Shop</h4>
+            <h4 class="categories-title" margin>ร้านค้ายอดนิยม</h4>
         </ion-col>
         <ion-col col-4 text-right>
-            <button ion-button clear (click)="goToShopList()">more..</button></ion-col>
+            <button ion-button small color="favorite" (click)="goToShopList()">เพิ่มเติม</button></ion-col>
     </ion-row>
     <ion-row class="grid-categories">
         <ion-col width-50 class="category-item" *ngFor="let shops of listing.shop">
@@ -58,17 +60,19 @@
     </ion-row>
     <ion-row>
         <ion-col col-8>
-            <h4 class="categories-title" margin>Popular</h4>
+            <h4 class="categories-title" margin>สินค้ายอดนิยม</h4>
         </ion-col>
         <ion-col col-4 text-right>
-            <button ion-button clear (click)="goToPrdList()">more..</button></ion-col>
+            <button ion-button small color="favorite" (click)="goToPrdList()">เพิ่มเติม</button></ion-col>
     </ion-row>
     <ion-scroll scrollX="true" class="horizontal-categories">
         <ion-row class="categories-row">
             <ion-col width-30 class="horizontal-item" *ngFor="let bestsellers of listing.bestseller" (click)="goToPrdDetail()">
                 <preload-image [ratio]="{w:1, h:1}" [src]="bestsellers.img"></preload-image>
-                <p class="txt-centr">{{bestsellers.name}}</p>
-                <p class="txt-centr2">{{bestsellers.price | number}} ฿</p>
+                <div class="product-box">
+                    <p class="txt-centr">{{bestsellers.name}}</p>
+                    <p class="txt-centr2">{{bestsellers.price | number}} ฿</p>
+                </div>
             </ion-col>
         </ion-row>
     </ion-scroll>
