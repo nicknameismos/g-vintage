@@ -1,13 +1,13 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Shop List</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>รายการร้านค้า</ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content class="list-mini-content">
-  <div class="list-mini">
-    <ion-list>
-      <button class="list-item" ion-item *ngFor="let item of shopeMore.items" (click)="openShopDetail()">
+    <div class="list-mini">
+        <ion-list>
+            <button class="list-item" ion-item *ngFor="let item of shopeMore.items" (click)="openShopDetail()">
         <ion-row no-padding class="content-row one-line">
           <!-- You can limit the rows of the description by using the class one-line. If you remove it, all the content from the row will be shown -->
           <ion-col no-padding width-18 class="item-avatar">
@@ -21,6 +21,6 @@
           </ion-col>
         </ion-row>
       </button>
-    </ion-list>
-  </div>
+        </ion-list>
+    </div>
 </ion-content>

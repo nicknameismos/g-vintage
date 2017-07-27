@@ -1,11 +1,11 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Cart</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>ตะกร้าสินค้า</ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content class="schedule-content">
-  <!-- <ion-segment class="schedule-segment" [(ngModel)]="segment" (ionChange)="onSegmentChanged($event)">
+    <!-- <ion-segment class="schedule-segment" [(ngModel)]="segment" (ionChange)="onSegmentChanged($event)">
     <ion-segment-button value="today" (ionSelect)="onSegmentSelected($event)">
       {{'TODAY' | translate}}
     </ion-segment-button>
@@ -14,93 +14,93 @@
     </ion-segment-button>
   </ion-segment> -->
 
-  <div>
     <div>
-      <ion-list class="schedule-list counter-list">
-        <ion-item class="schedule-item counter-item" *ngFor="let item of prodlist.items" (click)="productDetail()">
-          <ion-row>
-            <!-- <ion-col col-3 class="schedule-date">
+        <div>
+            <ion-list class="schedule-list counter-list">
+                <ion-item class="schedule-item counter-item" *ngFor="let item of prodlist.items" (click)="productDetail()">
+                    <ion-row>
+                        <!-- <ion-col col-3 class="schedule-date">
               <div class="data-item">
                 <div class="item-content">
                   <img [src]="item.img">
                 </div>
               </div>
             </ion-col> -->
-            <ion-col col-12 class="schedule-data">
-              <ion-row>
-                <ion-col col-3>
-                  <div class="data-item">
-                    <div class="item-content">
-                      <img [src]="item.img">
-                    </div>
-                  </div>
-                </ion-col>
-                <!--  -->
-                <ion-col col-9>
-                  <ion-row>
-                    <ion-col col-12>
-                      <div class="data-item">
-                        <div class="item-content">
-                          <h3>{{item.name}}</h3>
-                        </div>
-                      </div>
-                    </ion-col>
-                  </ion-row>
-                  <ion-row>
-                    <ion-col col-5>
-                      <div class="data-item">
-                        <div class="item-content">
-                          <div class="item-description">
-                            <!-- <ion-icon class="description-icon" name="clock"></ion-icon> -->
-                            <h2>{{item.price | number}} ฿</h2>
-                          </div>
-                        </div>
-                      </div>
-                    </ion-col>
-                    <ion-col col-7>
-                      <form [formGroup]="counterForm">
-                        <counter-input formControlName="counter" counterValue="{{item.qty}}"></counter-input>
-                      </form>
-                    </ion-col>
-                  </ion-row>
-                  <ion-row>
-                    <ion-col col-3>
-                      <div class="data-item">
-                        <div class="item-content">
-                          <div class="item-description">
-                            <ion-icon name="ios-heart"></ion-icon>
-                          </div>
-                        </div>
-                      </div>
-                    </ion-col>
-                    <ion-col col-9>
-                      <ion-icon name="ios-trash"></ion-icon>
-                    </ion-col>
-                  </ion-row>
-                </ion-col>
-              </ion-row>
-              <!--  -->
-            </ion-col>
-          </ion-row>
-        </ion-item>
-      </ion-list>
+                        <ion-col col-12 class="schedule-data">
+                            <ion-row>
+                                <ion-col col-3>
+                                    <div class="data-item">
+                                        <div class="item-content">
+                                            <img [src]="item.img">
+                                        </div>
+                                    </div>
+                                </ion-col>
+                                <!--  -->
+                                <ion-col col-9>
+                                    <ion-row>
+                                        <ion-col col-12>
+                                            <div class="data-item">
+                                                <div class="item-content">
+                                                    <h3>{{item.name}}</h3>
+                                                </div>
+                                            </div>
+                                        </ion-col>
+                                    </ion-row>
+                                    <ion-row>
+                                        <ion-col col-5>
+                                            <div class="data-item">
+                                                <div class="item-content">
+                                                    <div class="item-description">
+                                                        <!-- <ion-icon class="description-icon" name="clock"></ion-icon> -->
+                                                        <h2>{{item.price | number}} ฿</h2>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </ion-col>
+                                        <ion-col col-7>
+                                            <form [formGroup]="counterForm">
+                                                <counter-input formControlName="counter" counterValue="{{item.qty}}"></counter-input>
+                                            </form>
+                                        </ion-col>
+                                    </ion-row>
+                                    <ion-row>
+                                        <ion-col col-3>
+                                            <div class="data-item">
+                                                <div class="item-content">
+                                                    <div class="item-description">
+                                                        <ion-icon name="ios-heart"></ion-icon>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </ion-col>
+                                        <ion-col col-9>
+                                            <ion-icon name="ios-trash"></ion-icon>
+                                        </ion-col>
+                                    </ion-row>
+                                </ion-col>
+                            </ion-row>
+                            <!--  -->
+                        </ion-col>
+                    </ion-row>
+                </ion-item>
+            </ion-list>
+        </div>
     </div>
-  </div>
 </ion-content>
 
 <ion-footer>
 
-  <ion-navbar>
-    <ion-row>
-      <ion-col col-4><span>Total</span> </ion-col>
-      <ion-col col-2></ion-col>
-      <ion-col col-2></ion-col>
-      <ion-col col-4 text-right><span>{{prodlist.total | number}} ฿</span></ion-col>
-    </ion-row>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-row>
+            <ion-col col-4><span>รวม</span> </ion-col>
+            <ion-col col-2></ion-col>
+            <ion-col col-2></ion-col>
+            <ion-col col-4 text-right><span>{{prodlist.total | number}} ฿</span></ion-col>
+        </ion-row>
+    </ion-navbar>
 
-  <ion-navbar>
+    <ion-navbar>
 
-    <button ion-button full color="warning" (click)="gotoFormValidationsPage()">Continue</button>
-  </ion-navbar>
+        <button ion-button full color="warning" (click)="gotoFormValidationsPage()">ดำเนินการชำระเงิน</button>
+    </ion-navbar>
 </ion-footer>
