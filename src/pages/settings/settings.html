@@ -1,9 +1,9 @@
 <ion-header>
     <ion-navbar>
-        <ion-title>{{ 'SETTINGS' | translate }}</ion-title>
+        <ion-title>{{ 'ตั้งค่า' }}</ion-title>
         <ion-buttons end [hidden]="!settingsForm.dirty" (click)="popprofile()">
             <button ion-button>
-        {{ 'SAVE' | translate }}
+        {{ 'บันทึก' }}
       </button>
         </ion-buttons>
     </ion-navbar>
@@ -18,7 +18,7 @@
         </ion-row>
         <ion-row no-padding class="user-image-row">
             <ion-col no-padding width-60>
-                <button class="image-action-button" ion-button outline block small (click)="openImagePicker()">{{ 'CHANGE_PROFILE_PICTURE' | translate}}</button>
+                <button class="image-action-button" ion-button outline block small (click)="openImagePicker()">{{ 'แก้ไขรูปส่วนตัว'}}</button>
             </ion-col>
         </ion-row>
     </div>
@@ -26,23 +26,23 @@
     <form [formGroup]="settingsForm" class="settings-form">
         <ion-list class="user-data-content">
             <ion-item>
-                <ion-label stacked>{{ 'Name' }}</ion-label>
+                <ion-label stacked>{{ 'ชื่อ' }}</ion-label>
                 <ion-input type="text" formControlName="name"></ion-input>
             </ion-item>
             <ion-item>
-                <ion-label stacked>{{ 'Last Name'}}</ion-label>
+                <ion-label stacked>{{ 'นามสกุล'}}</ion-label>
                 <ion-input type="text" formControlName="lastname"></ion-input>
             </ion-item>
             <ion-item>
-                <ion-label stacked>{{ 'Email' }}</ion-label>
+                <ion-label stacked>{{ 'อีเมลล์' }}</ion-label>
                 <ion-input type="text" formControlName="email"></ion-input>
             </ion-item>
             <ion-item>
-                <ion-label stacked>{{ 'Tel' }}</ion-label>
+                <ion-label stacked>{{ 'โทร' }}</ion-label>
                 <ion-input type="text" formControlName="tel"></ion-input>
             </ion-item>
             <ion-item>
-                <ion-label stacked>{{ 'Address' }}</ion-label>
+                <ion-label stacked>{{ 'ที่อยู่' }}</ion-label>
                 <ion-textarea formControlName="address" rows="5"></ion-textarea>
             </ion-item>
         </ion-list>
@@ -111,6 +111,6 @@
 
     <button class="alt-button logout-button" ion-button full icon-left (click)="logout()">
     <ion-icon name="log-out"></ion-icon>
-    {{'LOG_OUT' | translate }}
+    {{'ออกจากระบบ' }}
   </button>
 </ion-content>
