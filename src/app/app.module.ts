@@ -70,7 +70,8 @@ import { ContactService } from '../pages/contact-card/contact-card.service';
 import { AddressComponent } from '../components/address/address';
 import { PaymentgatewayComponent } from '../components/paymentgateway/paymentgateway';
 import { ReviewgatewayComponent } from '../components/reviewgateway/reviewgateway';
-
+import { ShopPage } from "../pages/shopmore/shopmore";
+import { ShopmoreService } from "../pages/shopmore/shopmore.service";
 
 
 
@@ -104,7 +105,8 @@ export function createTranslateLoader(http: Http) {
     BackgroundImage,
     AddressComponent,
     PaymentgatewayComponent,
-    ReviewgatewayComponent
+    ReviewgatewayComponent,
+    ShopPage
   ],
   imports: [
     BrowserModule,
@@ -139,11 +141,13 @@ export function createTranslateLoader(http: Http) {
     Rating,
     FormValidationsPage,
     SchedulePage,
-    PaymentPage
+    PaymentPage,
+    ShopPage
   ],
   providers: [
     ListingService,
     ProfileService,
+    ShopmoreService,
 
     NotificationsService,
     ScheduleService,

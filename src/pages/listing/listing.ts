@@ -9,6 +9,7 @@ import { ListingModel } from './listing.model';
 import { ListingService } from './listing.service';
 import { ContactCardPage } from '../contact-card/contact-card';
 import { List2Page } from '../list-2/list-2';
+import { ShopPage } from "../shopmore/shopmore";
 
 @Component({
   selector: 'listing-page',
@@ -40,7 +41,9 @@ export class ListingPage {
         this.loading.dismiss();
       });
   }
-
+  goToShopList() {
+    this.nav.push(ShopPage);
+  }
 
   goToFeed(category: any) {
     console.log("Clicked goToFeed", category);

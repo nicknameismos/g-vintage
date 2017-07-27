@@ -1,0 +1,28 @@
+{
+    "items": [
+        {
+            "name": "Microsoft",
+            "img": "assets/images/shop/shop1.png"
+        },
+        {
+            "name": "Samsung",
+            "img": "assets/images/shop/shop2.png"
+        },
+        {
+            "name": "Converse",
+            "img": "assets/images/shop/shop3.png"
+        },
+        {
+            "name": "Fuji Film",
+            "img": "assets/images/shop/shop4.png"
+        },
+        {
+            "name": "Unilever",
+            "img": "assets/images/shop/shop5.png"
+        },
+        {
+            "name": "Nike",
+            "img": "assets/images/shop/shop6.png"
+        }
+    ]
+}
