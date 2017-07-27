@@ -8,6 +8,7 @@ import { ScheduleModel } from './schedule.model';
 import { ScheduleService } from './schedule.service';
 import { FormValidationsPage } from "../form-validations/form-validations";
 import { EventModel } from "./schedule.model";
+import { ProductdetailPage } from "../productdetail/productdetail";
 @Component({
   selector: 'schedule-page',
   templateUrl: 'schedule.html'
@@ -50,6 +51,10 @@ export class SchedulePage {
 
   onSegmentSelected(segmentButton: SegmentButton) {
     // console.log('Segment selected', segmentButton.value);
+  }
+
+  productDetail(){
+    this.nav.push(ProductdetailPage);
   }
   gotoFormValidationsPage() {
     this.nav.push(FormValidationsPage);
