@@ -17,7 +17,7 @@
   <div>
     <div>
       <ion-list class="schedule-list counter-list">
-        <ion-item class="schedule-item counter-item" *ngFor="let item of prodlist.items">
+        <ion-item class="schedule-item counter-item" *ngFor="let item of prodlist.items" (click)="productDetail()">
           <ion-row>
             <!-- <ion-col col-3 class="schedule-date">
               <div class="data-item">
