@@ -52,6 +52,36 @@
             <span class="detail-text">{{ delivery.name }}</span>
             <span class="detail-text">{{ delivery.desc }}</span>
         </ion-item>
+        <ion-item class="detail-item">
+            <h4 class="categories-title">{{'โปรโมชั่นสินค้า' | translate}}</h4>
+            <span class="detail-text">เมือซื้อเสื้อยีนส์ 1 แถม กางเกงยีนส์ขาสั้น 1 ตัว</span>
+        </ion-item>
+        <span class="detail-text">โปรดเลือกขนาด</span>
+        <ion-list class="radio-tags" radio-group>
+            <ion-item class="radio-tag">
+                <ion-label>S</ion-label>
+                <ion-radio value="s"></ion-radio>
+            </ion-item>
+            <ion-item class="radio-tag">
+                <ion-label>
+                    <span>M</span>
+                </ion-label>
+                <ion-radio value="m"></ion-radio>
+            </ion-item>
+            <ion-item class="radio-tag">
+                <ion-label>
+                    <span>L</span>
+                </ion-label>
+                <ion-radio value="l"></ion-radio>
+            </ion-item>
+            <ion-item class="radio-tag">
+                <ion-label>
+                    <span>XL</span>
+                </ion-label>
+                <ion-radio value="xl"></ion-radio>
+            </ion-item>
+        </ion-list>
+
     </ion-list>
     <h4 class="categories-title">{{'Relate' | translate}}</h4>
     <ion-scroll scrollX="true" class="horizontal-categories">
@@ -70,7 +100,7 @@
         <div style="text-align: center;">
             <ion-buttons>
                 <button ion-button icon-left (click)="goToSchedulePage()">
-        <ion-icon name="cart"></ion-icon>Order
+        <ion-icon name="cart"></ion-icon>ใส่ตะกร้า
       </button>
             </ion-buttons>
         </div>

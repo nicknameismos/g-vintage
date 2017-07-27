@@ -4,36 +4,39 @@
         "detail": "ฉีกทุกกฎแห่งการดีไซน์ ใส่สบาย เนื้อผ้านุ่ม",
         "price": "299",
         "img": "assets/images/products/p7.png",
-        "deliverytype": [{
-                "name": "Get by Sat, 29 Jul 2017 Free",
-                "desc": "Express Delively"
+        "deliverytype": [
+            {
+                "name": "สั่งภายใน วันเสาร์ที่ 29 กรกฎาคม 2017 ส่งฟรี",
+                "desc": "การจัดส่งด่วน"
             },
             {
-                "name": "Get by Sat, 29 - Mon, 31 Jul 2017 Free",
-                "desc": "Standard Delively"
+                "name": "สั่งภายใน วันเสาร์ที่ 29 - 31 กรกฎาคม 2017 ส่งฟรี",
+                "desc": "การจัดส่งแบบมาตรฐาน"
             },
             {
-                "name": "Get by Tue, 1 - Mon, 7 Aug 2017 Free",
-                "desc": "Economy Delively"
+                "name": "สั่งภายใน วันอังคารที่ 1 - 7 กรกฎาคม 2017 ส่งฟรี",
+                "desc": "การจัดส่งทางเศรษฐกิจ"
             }
         ]
     },
-    "productrelate": [{
+    "productrelate": [
+        {
             "name": "เสื้อยีนส์",
             "detail": "ฉีกทุกกฎแห่งการดีไซน์",
             "price": "299",
             "img": "assets/images/products/p7.png",
-            "deliverytype": [{
-                    "name": "Get by Sat, 29 Jul 2017 Free",
-                    "desc": "Express Delively"
+            "deliverytype": [
+                {
+                    "name": "สั่งภายใน วันเสาร์ที่ 29 กรกฎาคม 2017 ส่งฟรี",
+                    "desc": "การจัดส่งด่วน"
                 },
                 {
-                    "name": "Get by Sat, 29 - Mon, 31 Jul 2017 Free",
-                    "desc": "Standard Delively"
+                    "name": "สั่งภายใน วันเสาร์ที่ 29 - 31 กรกฎาคม 2017 ส่งฟรี",
+                    "desc": "การจัดส่งแบบมาตรฐาน"
                 },
                 {
-                    "name": "Get by Tue, 1 - Mon, 7 Aug 2017 Free",
-                    "desc": "Economy Delively"
+                    "name": "สั่งภายใน วันอังคารที่ 1 - 7 กรกฎาคม 2017 ส่งฟรี",
+                    "desc": "การจัดส่งทางเศรษฐกิจ"
                 }
             ]
         },
@@ -42,17 +45,18 @@
             "detail": "ฉีกทุกกฎแห่งการดีไซน์",
             "price": "199",
             "img": "assets/images/products/p8.png",
-            "deliverytype": [{
-                    "name": "Get by Sat, 29 Jul 2017 Free",
-                    "desc": "Express Delively"
+            "deliverytype": [
+                {
+                    "name": "สั่งภายใน วันเสาร์ที่ 29 กรกฎาคม 2017 ส่งฟรี",
+                    "desc": "การจัดส่งด่วน"
                 },
                 {
-                    "name": "Get by Sat, 29 - Mon, 31 Jul 2017 Free",
-                    "desc": "Standard Delively"
+                    "name": "สั่งภายใน วันเสาร์ที่ 29 - 31 กรกฎาคม 2017 ส่งฟรี",
+                    "desc": "การจัดส่งแบบมาตรฐาน"
                 },
                 {
-                    "name": "Get by Tue, 1 - Mon, 7 Aug 2017 Free",
-                    "desc": "Economy Delively"
+                    "name": "สั่งภายใน วันอังคารที่ 1 - 7 กรกฎาคม 2017 ส่งฟรี",
+                    "desc": "การจัดส่งทางเศรษฐกิจ"
                 }
             ]
         },
@@ -61,17 +65,18 @@
             "detail": "ฉีกทุกกฎแห่งการดีไซน์",
             "price": "299",
             "img": "assets/images/products/p9.png",
-            "deliverytype": [{
-                    "name": "Get by Sat, 29 Jul 2017 Free",
-                    "desc": "Express Delively"
+            "deliverytype": [
+                {
+                    "name": "สั่งภายใน วันเสาร์ที่ 29 กรกฎาคม 2017 ส่งฟรี",
+                    "desc": "การจัดส่งด่วน"
                 },
                 {
-                    "name": "Get by Sat, 29 - Mon, 31 Jul 2017 Free",
-                    "desc": "Standard Delively"
+                    "name": "สั่งภายใน วันเสาร์ที่ 29 - 31 กรกฎาคม 2017 ส่งฟรี",
+                    "desc": "การจัดส่งแบบมาตรฐาน"
                 },
                 {
-                    "name": "Get by Tue, 1 - Mon, 7 Aug 2017 Free",
-                    "desc": "Economy Delively"
+                    "name": "สั่งภายใน วันอังคารที่ 1 - 7 กรกฎาคม 2017 ส่งฟรี",
+                    "desc": "การจัดส่งทางเศรษฐกิจ"
                 }
             ]
         },
@@ -80,17 +85,18 @@
             "detail": "ฉีกทุกกฎแห่งการดีไซน์",
             "price": "399",
             "img": "assets/images/products/p10.png",
-            "deliverytype": [{
-                    "name": "Get by Sat, 29 Jul 2017 Free",
-                    "desc": "Express Delively"
+            "deliverytype": [
+                {
+                    "name": "สั่งภายใน วันเสาร์ที่ 29 กรกฎาคม 2017 ส่งฟรี",
+                    "desc": "การจัดส่งด่วน"
                 },
                 {
-                    "name": "Get by Sat, 29 - Mon, 31 Jul 2017 Free",
-                    "desc": "Standard Delively"
+                    "name": "สั่งภายใน วันเสาร์ที่ 29 - 31 กรกฎาคม 2017 ส่งฟรี",
+                    "desc": "การจัดส่งแบบมาตรฐาน"
                 },
                 {
-                    "name": "Get by Tue, 1 - Mon, 7 Aug 2017 Free",
-                    "desc": "Economy Delively"
+                    "name": "สั่งภายใน วันอังคารที่ 1 - 7 กรกฎาคม 2017 ส่งฟรี",
+                    "desc": "การจัดส่งทางเศรษฐกิจ"
                 }
             ]
         }
