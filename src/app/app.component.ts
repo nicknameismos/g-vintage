@@ -56,8 +56,8 @@ export class MyApp {
         platform.setDir('rtl', false);
       }
       Observable.forkJoin(
-        this.translate.get('HOME'),
-        this.translate.get('SETTINGS')
+        this.translate.get('หน้าหลัก'),
+        this.translate.get('ตั้งค่า')
       ).subscribe(data => {
         this.pages = [
           { title: data[0], icon: 'home', component: TabsNavigationPage }
