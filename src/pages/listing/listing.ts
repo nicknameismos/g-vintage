@@ -36,6 +36,7 @@ export class ListingPage {
         this.listing.banner_image = data.banner_image;
         this.listing.banner_title = data.banner_title;
         this.listing.block_bg = data.block_bg;
+        this.listing.banner_logo = data.banner_logo;
 
         this.listing.lastview = data.lastview;
         this.listing.shop = data.shop;

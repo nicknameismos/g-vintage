@@ -5,6 +5,7 @@ export class ListingModel {
 
   banner_title: string;
   banner_image: string;
+  banner_logo: string;
   block_bg: string;
 
 
