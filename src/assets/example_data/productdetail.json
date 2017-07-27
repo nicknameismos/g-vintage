@@ -5,10 +5,16 @@
     "price": "8999",
     "img": "assets/images/products/p7.png",
     "deliverytype": [{
-        "desc": "Standard Delively"
+        "name": "Express Delively : Free",
+        "desc": "Get by Sat, 29 Jul 2017"
       },
       {
-        "desc": "Extra Delively"
+        "name": "Standard Delively : Free",
+        "desc": "Get by Sat, 29 - Mon, 31 Jul 2017"
+      },
+      {
+        "name": "Economy Delively : Free",
+        "desc": "Get by Tue, 1 - Mon, 7 Aug 2017"
       }
     ]
   },
@@ -18,10 +24,16 @@
       "price": "8999",
       "img": "assets/images/products/p7.png",
       "deliverytype": [{
-          "desc": "Standard Delively"
+          "name": "Express Delively : Free",
+          "desc": "Get by Sat, 29 Jul 2017"
         },
         {
-          "desc": "Extra Delively"
+          "name": "Standard Delively : Free",
+          "desc": "Get by Sat, 29 - Mon, 31 Jul 2017"
+        },
+        {
+          "name": "Economy Delively : Free",
+          "desc": "Get by Tue, 1 - Mon, 7 Aug 2017"
         }
       ]
     },
@@ -31,10 +43,16 @@
       "price": "21790",
       "img": "assets/images/products/p8.png",
       "deliverytype": [{
-          "desc": "Standard Delively"
+          "name": "Express Delively : Free",
+          "desc": "Get by Sat, 29 Jul 2017"
         },
         {
-          "desc": "Extra Delively"
+          "name": "Standard Delively : Free",
+          "desc": "Get by Sat, 29 - Mon, 31 Jul 2017"
+        },
+        {
+          "name": "Economy Delively : Free",
+          "desc": "Get by Tue, 1 - Mon, 7 Aug 2017"
         }
       ]
     },
@@ -44,10 +62,16 @@
       "price": "12900",
       "img": "assets/images/products/p9.png",
       "deliverytype": [{
-          "desc": "Standard Delively"
+          "name": "Express Delively : Free",
+          "desc": "Get by Sat, 29 Jul 2017"
         },
         {
-          "desc": "Extra Delively"
+          "name": "Standard Delively : Free",
+          "desc": "Get by Sat, 29 - Mon, 31 Jul 2017"
+        },
+        {
+          "name": "Economy Delively : Free",
+          "desc": "Get by Tue, 1 - Mon, 7 Aug 2017"
         }
       ]
     },
@@ -57,10 +81,16 @@
       "price": "11111",
       "img": "assets/images/products/p10.png",
       "deliverytype": [{
-          "desc": "Standard Delively"
+          "name": "Express Delively : Free",
+          "desc": "Get by Sat, 29 Jul 2017"
         },
         {
-          "desc": "Extra Delively"
+          "name": "Standard Delively : Free",
+          "desc": "Get by Sat, 29 - Mon, 31 Jul 2017"
+        },
+        {
+          "name": "Economy Delively : Free",
+          "desc": "Get by Tue, 1 - Mon, 7 Aug 2017"
         }
       ]
     },
@@ -70,10 +100,16 @@
       "price": "3579",
       "img": "assets/images/products/p11.png",
       "deliverytype": [{
-          "desc": "Standard Delively"
+          "name": "Express Delively : Free",
+          "desc": "Get by Sat, 29 Jul 2017"
         },
         {
-          "desc": "Extra Delively"
+          "name": "Standard Delively : Free",
+          "desc": "Get by Sat, 29 - Mon, 31 Jul 2017"
+        },
+        {
+          "name": "Economy Delively : Free",
+          "desc": "Get by Tue, 1 - Mon, 7 Aug 2017"
         }
       ]
     },
@@ -83,10 +119,16 @@
       "price": "15900",
       "img": "assets/images/products/p12.png",
       "deliverytype": [{
-          "desc": "Standard Delively"
+          "name": "Express Delively : Free",
+          "desc": "Get by Sat, 29 Jul 2017"
         },
         {
-          "desc": "Extra Delively"
+          "name": "Standard Delively : Free",
+          "desc": "Get by Sat, 29 - Mon, 31 Jul 2017"
+        },
+        {
+          "name": "Economy Delively : Free",
+          "desc": "Get by Tue, 1 - Mon, 7 Aug 2017"
         }
       ]
     }
